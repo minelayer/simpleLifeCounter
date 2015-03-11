@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ja" manifest="index.appcache">
+<html lang="ja">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="initial-scale=1, minimum-scale=1, maximum-scale=1">
@@ -45,6 +45,25 @@
 				</ul>
 			</div>
 		</div>
+		<div class="setting-group" id="set-fullscreen">
+			<p class="setting-title">フルスクリーン（Chromeのみ）</p>
+			<div class="setting-input">
+				<ul>
+					<li><span data-set_fullscreen="set"><i class="fa fa-check"></i>使用</span></li>
+					<li class="active"><span data-set_fullscreen="cancel"><i class="fa fa-check"></i>未使用</span></li>
+				</ul>
+			</div>
+		</div>
+		<!-- div class="setting-group" id="set-neversleep">
+			<p class="setting-title">自動ロック抑制（Safariのみ）</p>
+			<div class="setting-input">
+				<ul>
+					<li><span data-neversleep="set"><i class="fa fa-check"></i>使用</span></li>
+					<li class="active"><span data-neversleep="cancel"><i class="fa fa-check"></i>未使用</span></li>
+				</ul>
+				<audio id="silent" src="flyers.mp3" loop></audio>
+			</div>
+		</div -->
 		<div class="setting-group" id="name-disp">
 			<p class="setting-title">名前表示</p>
 			<div class="setting-input">

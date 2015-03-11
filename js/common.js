@@ -1,4 +1,5 @@
 $(function () {
+
 	$('main').on('touchmove', function(e) {
 		e.preventDefault();
 	});
@@ -86,6 +87,20 @@ $(function () {
 			$(this).parent().addClass('active');
 			setPoisonDisp(poisonDisp);
 		});
+		$('#set-fullscreen span').on(_touch, function(){
+			var switchScreen = $(this).data('set_fullscreen');
+			console.log(switchScreen);
+			$(this).parent().siblings().removeClass('active');
+			$(this).parent().addClass('active');
+			switchScreen == 'set' ? setFullScreen() : cancelFullScreen();
+		});
+		/*$('#set-neversleep span').on(_touch, function(){
+			var switchNeversleep = $(this).data('neversleep');
+			console.log(switchNeversleep);
+			$(this).parent().siblings().removeClass('active');
+			$(this).parent().addClass('active');
+			switchNeversleep == 'set' ?  $('#silent')[0].play() :  $('#silent')[0].pause();
+		});*/
 		$('#name-disp span').on(_touch, function(){
 			nameDisp = $(this).data('name_disp');
 			console.log(nameDisp);
@@ -121,6 +136,29 @@ $(function () {
 	function setNameInput(name, targetID){ //名前入力時
 		$('#' + targetID + ' .name').text(name);
 		console.log('#' + targetID + ' .name');
+	}
+
+	function setFullScreen(){
+		if ((document.fullScreenElement && document.fullScreenElement !== null) ||    // alternative standard method
+		(!document.mozFullScreen && !document.webkitIsFullScreen)) {              // current working methods
+			if (document.documentElement.requestFullScreen) {
+				document.documentElement.requestFullScreen();
+			} else if (document.documentElement.mozRequestFullScreen) {
+				document.documentElement.mozRequestFullScreen();
+			} else if (document.documentElement.webkitRequestFullScreen) {
+				document.documentElement.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);
+			}
+		}
+	}
+
+	function cancelFullScreen(){
+		if (document.cancelFullScreen) {
+			document.cancelFullScreen();
+		} else if (document.mozCancelFullScreen) {
+			document.mozCancelFullScreen();
+		} else if (document.webkitCancelFullScreen) {
+			document.webkitCancelFullScreen();
+		}
 	}
 
 	function initialize(){

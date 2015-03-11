@@ -1,0 +1,23 @@
+CACHE MANIFEST
+# 2015-03-12:ver 2.0
+
+# Explicitly cached 'master entries'.
+CACHE:
+css/font-awesome.css
+css/style.css
+font/fontawesome-webfont.eot
+font/fontawesome-webfont.svg
+font/fontawesome-webfont.ttf
+font/fontawesome-webfont.woff
+font/fontawesome-webfont.woff2
+font/FontAwesome.otf
+js/jquery-1.11.2.min.js
+js/jquery-1.11.2.min.map
+js/common.js
+img/phyrexia.png
+img/icon.png
+
+
+# Resources that require the user to be online.
+NETWORK:
+index.html

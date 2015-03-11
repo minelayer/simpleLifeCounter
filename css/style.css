@@ -1,0 +1,450 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 5, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 8, ../sass/style.scss */
+body {
+  font-family: sans-serif;
+  -webkit-user-select: none;
+}
+
+@media only screen and (orientation: landscape) {
+  /* line 15, ../sass/style.scss */
+  .main.player-number-2 .player {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    background: #e3e3e3;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  /* line 24, ../sass/style.scss */
+  .main.player-number-2 .player.player1 {
+    left: 0;
+    border-right: 1px solid #aaa;
+    z-index: 2;
+  }
+  /* line 29, ../sass/style.scss */
+  .main.player-number-2 .player.player2 {
+    right: 0;
+    z-index: 1;
+  }
+  /* line 33, ../sass/style.scss */
+  .main.player-number-2 .player.player3 {
+    display: none;
+  }
+  /* line 36, ../sass/style.scss */
+  .main.player-number-2 .player.player4 {
+    display: none;
+  }
+  /* line 42, ../sass/style.scss */
+  .main.player-number-4 .player {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    background: #e3e3e3;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  /* line 49, ../sass/style.scss */
+  .main.player-number-4 .player.player1 {
+    left: 0;
+    top: 0;
+    border-right: 1px solid #aaa;
+    border-bottom: 1px solid #aaa;
+    z-index: 4;
+  }
+  /* line 56, ../sass/style.scss */
+  .main.player-number-4 .player.player2 {
+    right: 0;
+    top: 0;
+    z-index: 3;
+    border-bottom: 1px solid #aaa;
+  }
+  /* line 62, ../sass/style.scss */
+  .main.player-number-4 .player.player3 {
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    border-right: 1px solid #aaa;
+  }
+  /* line 68, ../sass/style.scss */
+  .main.player-number-4 .player.player4 {
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+}
+@media only screen and (orientation: portrait) {
+  /* line 80, ../sass/style.scss */
+  .main.player-number-2 .player {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    left: 0;
+    right: 0;
+    background: #e3e3e3;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  /* line 89, ../sass/style.scss */
+  .main.player-number-2 .player.player1 {
+    top: 0;
+    border-bottom: 1px solid #aaa;
+    z-index: 2;
+  }
+  /* line 94, ../sass/style.scss */
+  .main.player-number-2 .player.player2 {
+    bottom: 0;
+    z-index: 1;
+  }
+  /* line 98, ../sass/style.scss */
+  .main.player-number-2 .player.player3 {
+    display: none;
+  }
+  /* line 101, ../sass/style.scss */
+  .main.player-number-2 .player.player4 {
+    display: none;
+  }
+  /* line 107, ../sass/style.scss */
+  .main.player-number-4 .player {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    background: #e3e3e3;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  /* line 114, ../sass/style.scss */
+  .main.player-number-4 .player.player3 {
+    left: 0;
+    top: 0;
+    border-right: 1px solid #aaa;
+    border-bottom: 1px solid #aaa;
+    z-index: 4;
+  }
+  /* line 121, ../sass/style.scss */
+  .main.player-number-4 .player.player1 {
+    right: 0;
+    top: 0;
+    z-index: 3;
+    border-bottom: 1px solid #aaa;
+  }
+  /* line 127, ../sass/style.scss */
+  .main.player-number-4 .player.player4 {
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    border-right: 1px solid #aaa;
+  }
+  /* line 133, ../sass/style.scss */
+  .main.player-number-4 .player.player2 {
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+}
+/* line 143, ../sass/style.scss */
+.life-block {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+}
+/* line 148, ../sass/style.scss */
+.life-block .name {
+  opacity: 0;
+  text-align: center;
+  z-index: 1;
+  font-family: Helvetica;
+}
+/* line 154, ../sass/style.scss */
+.life-block .life {
+  font-weight: bold;
+  text-align: center;
+  font-family: Helvetica;
+  font-size: 240px;
+  line-height: 1;
+  z-index: 3;
+}
+/* line 162, ../sass/style.scss */
+.life-block .diff {
+  text-align: center;
+  z-index: 1;
+  font-family: Helvetica;
+  opacity: 0;
+}
+
+/* line 170, ../sass/style.scss */
+.poison {
+  display: none;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  font-family: Helvetica;
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  line-height: 1;
+  padding: 0 10px;
+  z-index: 12;
+  border: 1px solid #eee;
+}
+/* line 184, ../sass/style.scss */
+.poison:before {
+  content: '**';
+  color: transparent;
+  background: url(../img/phyrexia.png) no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+/* line 193, ../sass/style.scss */
+.upperside {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 50%;
+  left: 0;
+  right: 0;
+  cursor: n-resize;
+  z-index: 10;
+}
+/* line 202, ../sass/style.scss */
+.upperside .guide {
+  display: block;
+  position: absolute;
+  top: 5%;
+  text-align: center;
+  color: #ccc;
+  left: 0;
+  right: 0;
+}
+
+/* line 213, ../sass/style.scss */
+.lowerside {
+  display: block;
+  position: absolute;
+  top: 50%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  cursor: s-resize;
+  z-index: 10;
+}
+/* line 222, ../sass/style.scss */
+.lowerside .guide {
+  display: block;
+  position: absolute;
+  bottom: 5%;
+  text-align: center;
+  color: #ccc;
+  left: 0;
+  right: 0;
+}
+
+/* line 233, ../sass/style.scss */
+.menu {
+  position: absolute;
+  z-index: 30;
+  width: 100%;
+}
+/* line 237, ../sass/style.scss */
+.menu .reload {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 10px;
+  font-size: 30px;
+  color: #444;
+  cursor: pointer;
+}
+/* line 246, ../sass/style.scss */
+.menu .settings {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 10px;
+  font-size: 30px;
+  color: #444;
+  cursor: pointer;
+}
+
+/* line 257, ../sass/style.scss */
+.settings-block {
+  display: none;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.9);
+  width: 80%;
+  height: 80%;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  z-index: 999;
+  color: #fff;
+}
+/* line 268, ../sass/style.scss */
+.settings-block .close-btn {
+  position: absolute;
+  right: -12px;
+  top: -12px;
+  background: #d00;
+  width: 36px;
+  height: 36px;
+  border-radius: 18px;
+  text-align: center;
+  line-height: 36px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+}
+/* line 282, ../sass/style.scss */
+.settings-block .setting-form {
+  overflow: scroll;
+  height: 100%;
+  padding: 2.5% 5%;
+  box-sizing: border-box;
+}
+/* line 288, ../sass/style.scss */
+.settings-block .setting-form .setting-group .setting-title {
+  font-weight: bold;
+  padding: 10px 10px 10px;
+}
+/* line 292, ../sass/style.scss */
+.settings-block .setting-form .setting-group .setting-input {
+  padding: 0;
+}
+/* line 294, ../sass/style.scss */
+.settings-block .setting-form .setting-group .setting-input ul {
+  display: flex;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+}
+/* line 298, ../sass/style.scss */
+.settings-block .setting-form .setting-group .setting-input ul li {
+  flex-grow: 1;
+  -webkit-flex-grow: 1;
+  margin: 0 10px 10px;
+}
+/* line 302, ../sass/style.scss */
+.settings-block .setting-form .setting-group .setting-input ul li span {
+  display: block;
+  border: 1px solid #ddd;
+  color: #ddd;
+  padding: 5px;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+/* line 310, ../sass/style.scss */
+.settings-block .setting-form .setting-group .setting-input ul li span .fa {
+  display: none;
+}
+/* line 314, ../sass/style.scss */
+.settings-block .setting-form .setting-group .setting-input ul li input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 100%;
+  display: block;
+  margin: 0;
+  border: 1px solid #ddd;
+  color: #ddd;
+  padding: 5px;
+  box-sizing: border-box;
+  text-align: center;
+  border-radius: 5px;
+  background: transparent;
+  font-size: 16px;
+}
+/* line 331, ../sass/style.scss */
+.settings-block .setting-form .setting-group .setting-input ul li.active span {
+  border: 1px solid #fff;
+  background: #eee;
+  color: #000;
+}
+/* line 335, ../sass/style.scss */
+.settings-block .setting-form .setting-group .setting-input ul li.active span .fa {
+  display: inline-block;
+}
+
+/* line 346, ../sass/style.scss */
+.settings-bg {
+  display: none;
+  background: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 500;
+}

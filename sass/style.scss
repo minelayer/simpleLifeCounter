@@ -56,7 +56,9 @@ body{
 				&.player2{
 					right: 0;
 					z-index:1;
-					transform: rotate(180deg);
+					transform: rotate3d(0,0,1,180deg);
+					-webkit-transform: rotate3d(0,0,1,180deg);
+
 				}
 				&.player3{
 					display: none;
@@ -147,14 +149,21 @@ body{
 					border-left: 1px solid #aaa;
 					border-top: 1px solid #aaa;
 					z-index:4;
-					transform: rotate(180deg);
+					transform: rotate3d(0,0,1,180deg);
+					-webkit-transform: rotate3d(0,0,1,180deg);
+					.poison{
+						right: auto;
+						left: 5%;
+					}
 				}
 				&.player2{
 					right: 0;
 					top: 0;
 					z-index:3;
 					border-top: 1px solid #aaa;
-					transform: rotate(180deg);
+					transform: rotate3d(0,0,1,180deg);
+					-webkit-transform: rotate3d(0,0,1,180deg);
+
 				}
 				&.player3{
 					left: 0;
@@ -166,6 +175,10 @@ body{
 					right: 0;
 					bottom: 0;
 					z-index:1;
+					.poison{
+						right: auto;
+						left: 5%;
+					}
 				}
 			}
 		}
@@ -240,11 +253,18 @@ body{
 					top: 0;
 					border-top: 1px solid #aaa;
 					z-index:2;
-					transform: rotate(180deg);
+					transform: rotate3d(0,0,1,180deg);
+					-webkit-transform: rotate3d(0,0,1,180deg);
+					.poison{
+						bottom: 40%;
+					}
 				}
 				&.player2{
 					bottom: 0;
 					z-index:1;
+					.poison{
+						bottom: 40%;
+					}
 				}
 				&.player3{
 					display: none;
@@ -335,14 +355,20 @@ body{
 					border-left: 1px solid #aaa;
 					border-top: 1px solid #aaa;
 					z-index:4;
-					transform: rotate(180deg);
+					transform: rotate3d(0,0,1,180deg);
+					-webkit-transform: rotate3d(0,0,1,180deg);
+					.poison{
+						right: auto;
+						left: 5%;
+					}
 				}
 				&.player1{
 					right: 0;
 					top: 0;
 					z-index:3;
 					border-top: 1px solid #aaa;
-					transform: rotate(180deg);
+					transform: rotate3d(0,0,1,180deg);
+					-webkit-transform: rotate3d(0,0,1,180deg);
 				}
 				&.player4{
 					left: 0;
@@ -354,6 +380,10 @@ body{
 					right: 0;
 					bottom: 0;
 					z-index:1;
+					.poison{
+						right: auto;
+						left: 5%;
+					}
 				}
 			}
 		}
@@ -415,13 +445,13 @@ body{
 
 .poison{
 	display: none;
-	background: rgba(0,0,0,0.7);
+	background: rgba(0,0,0,0.5);
 	color: #fff;
 	font-weight: bold;
 	text-align: center;
 	font-family: Helvetica;
 	position: absolute;
-	bottom: 5%;
+	bottom: 10%;
 	right: 5%;
 	line-height: 1;
 	padding: 0 10px;
@@ -482,6 +512,8 @@ body{
 	width: 100%;
 	.reload{
 		position: absolute;
+		background: rgba(239,239,239,0.5);
+		border-radius: 5px;
 		right: 0;
 		top: 0;
 		padding: 10px;
@@ -491,6 +523,8 @@ body{
 	}
 	.settings{
 		position: absolute;
+		background: rgba(239,239,239,0.5);
+		border-radius: 5px;
 		left: 0;
 		top: 0;
 		padding: 10px;

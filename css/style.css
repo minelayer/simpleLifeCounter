@@ -125,17 +125,18 @@ body {
   .main.player-number-2a .player.player2 {
     right: 0;
     z-index: 1;
-    transform: rotate(180deg);
+    transform: rotate3d(0, 0, 1, 180deg);
+    -webkit-transform: rotate3d(0, 0, 1, 180deg);
   }
-  /* line 61, ../sass/style.scss */
+  /* line 63, ../sass/style.scss */
   .main.player-number-2a .player.player3 {
     display: none;
   }
-  /* line 64, ../sass/style.scss */
+  /* line 66, ../sass/style.scss */
   .main.player-number-2a .player.player4 {
     display: none;
   }
-  /* line 70, ../sass/style.scss */
+  /* line 72, ../sass/style.scss */
   .main.player-number-4 .player {
     position: absolute;
     width: 50%;
@@ -144,7 +145,7 @@ body {
     box-sizing: border-box;
     overflow: hidden;
   }
-  /* line 77, ../sass/style.scss */
+  /* line 79, ../sass/style.scss */
   .main.player-number-4 .player.player1 {
     left: 0;
     top: 0;
@@ -152,27 +153,27 @@ body {
     border-bottom: 1px solid #aaa;
     z-index: 4;
   }
-  /* line 84, ../sass/style.scss */
+  /* line 86, ../sass/style.scss */
   .main.player-number-4 .player.player2 {
     right: 0;
     top: 0;
     z-index: 3;
     border-bottom: 1px solid #aaa;
   }
-  /* line 90, ../sass/style.scss */
+  /* line 92, ../sass/style.scss */
   .main.player-number-4 .player.player3 {
     left: 0;
     bottom: 0;
     z-index: 2;
     border-right: 1px solid #aaa;
   }
-  /* line 96, ../sass/style.scss */
+  /* line 98, ../sass/style.scss */
   .main.player-number-4 .player.player4 {
     right: 0;
     bottom: 0;
     z-index: 1;
   }
-  /* line 104, ../sass/style.scss */
+  /* line 106, ../sass/style.scss */
   .main.player-number-4a .player {
     position: absolute;
     width: 25%;
@@ -181,34 +182,34 @@ body {
     box-sizing: border-box;
     overflow: hidden;
   }
-  /* line 111, ../sass/style.scss */
+  /* line 113, ../sass/style.scss */
   .main.player-number-4a .player.player1 {
     left: 0;
     top: 0;
     border-right: 1px solid #aaa;
     z-index: 4;
   }
-  /* line 117, ../sass/style.scss */
+  /* line 119, ../sass/style.scss */
   .main.player-number-4a .player.player2 {
     left: 25%;
     top: 0;
     z-index: 3;
     border-right: 1px solid #aaa;
   }
-  /* line 123, ../sass/style.scss */
+  /* line 125, ../sass/style.scss */
   .main.player-number-4a .player.player3 {
     left: 50%;
     top: 0;
     z-index: 2;
     border-right: 1px solid #aaa;
   }
-  /* line 129, ../sass/style.scss */
+  /* line 131, ../sass/style.scss */
   .main.player-number-4a .player.player4 {
     right: 0;
     top: 0;
     z-index: 1;
   }
-  /* line 137, ../sass/style.scss */
+  /* line 139, ../sass/style.scss */
   .main.player-number-4b .player {
     position: absolute;
     width: 50%;
@@ -217,37 +218,49 @@ body {
     box-sizing: border-box;
     overflow: hidden;
   }
-  /* line 144, ../sass/style.scss */
+  /* line 146, ../sass/style.scss */
   .main.player-number-4b .player.player1 {
     left: 0;
     top: 0;
     border-left: 1px solid #aaa;
     border-top: 1px solid #aaa;
     z-index: 4;
-    transform: rotate(180deg);
+    transform: rotate3d(0, 0, 1, 180deg);
+    -webkit-transform: rotate3d(0, 0, 1, 180deg);
   }
-  /* line 152, ../sass/style.scss */
+  /* line 154, ../sass/style.scss */
+  .main.player-number-4b .player.player1 .poison {
+    right: auto;
+    left: 5%;
+  }
+  /* line 159, ../sass/style.scss */
   .main.player-number-4b .player.player2 {
     right: 0;
     top: 0;
     z-index: 3;
     border-top: 1px solid #aaa;
-    transform: rotate(180deg);
+    transform: rotate3d(0, 0, 1, 180deg);
+    -webkit-transform: rotate3d(0, 0, 1, 180deg);
   }
-  /* line 159, ../sass/style.scss */
+  /* line 168, ../sass/style.scss */
   .main.player-number-4b .player.player3 {
     left: 0;
     bottom: 0;
     z-index: 2;
     border-right: 1px solid #aaa;
   }
-  /* line 165, ../sass/style.scss */
+  /* line 174, ../sass/style.scss */
   .main.player-number-4b .player.player4 {
     right: 0;
     bottom: 0;
     z-index: 1;
   }
-  /* line 173, ../sass/style.scss */
+  /* line 178, ../sass/style.scss */
+  .main.player-number-4b .player.player4 .poison {
+    right: auto;
+    left: 5%;
+  }
+  /* line 186, ../sass/style.scss */
   .main.player-number-1 .player {
     position: absolute;
     width: 100%;
@@ -256,7 +269,7 @@ body {
     box-sizing: border-box;
     overflow: hidden;
   }
-  /* line 180, ../sass/style.scss */
+  /* line 193, ../sass/style.scss */
   .main.player-number-1 .player.player1 {
     right: 0;
     top: 0;
@@ -264,21 +277,21 @@ body {
     bottom: 0;
     z-index: 3;
   }
-  /* line 187, ../sass/style.scss */
+  /* line 200, ../sass/style.scss */
   .main.player-number-1 .player.player3 {
     display: none;
   }
-  /* line 190, ../sass/style.scss */
+  /* line 203, ../sass/style.scss */
   .main.player-number-1 .player.player4 {
     display: none;
   }
-  /* line 193, ../sass/style.scss */
+  /* line 206, ../sass/style.scss */
   .main.player-number-1 .player.player2 {
     display: none;
   }
 }
 @media only screen and (orientation: portrait) {
-  /* line 203, ../sass/style.scss */
+  /* line 216, ../sass/style.scss */
   .main.player-number-2 .player {
     position: absolute;
     width: 100%;
@@ -289,26 +302,26 @@ body {
     box-sizing: border-box;
     overflow: hidden;
   }
-  /* line 212, ../sass/style.scss */
+  /* line 225, ../sass/style.scss */
   .main.player-number-2 .player.player1 {
     top: 0;
     border-bottom: 1px solid #aaa;
     z-index: 2;
   }
-  /* line 217, ../sass/style.scss */
+  /* line 230, ../sass/style.scss */
   .main.player-number-2 .player.player2 {
     bottom: 0;
     z-index: 1;
   }
-  /* line 221, ../sass/style.scss */
+  /* line 234, ../sass/style.scss */
   .main.player-number-2 .player.player3 {
     display: none;
   }
-  /* line 224, ../sass/style.scss */
+  /* line 237, ../sass/style.scss */
   .main.player-number-2 .player.player4 {
     display: none;
   }
-  /* line 230, ../sass/style.scss */
+  /* line 243, ../sass/style.scss */
   .main.player-number-2a .player {
     position: absolute;
     width: 100%;
@@ -319,27 +332,36 @@ body {
     box-sizing: border-box;
     overflow: hidden;
   }
-  /* line 239, ../sass/style.scss */
+  /* line 252, ../sass/style.scss */
   .main.player-number-2a .player.player1 {
     top: 0;
     border-top: 1px solid #aaa;
     z-index: 2;
-    transform: rotate(180deg);
+    transform: rotate3d(0, 0, 1, 180deg);
+    -webkit-transform: rotate3d(0, 0, 1, 180deg);
   }
-  /* line 245, ../sass/style.scss */
+  /* line 258, ../sass/style.scss */
+  .main.player-number-2a .player.player1 .poison {
+    bottom: 40%;
+  }
+  /* line 262, ../sass/style.scss */
   .main.player-number-2a .player.player2 {
     bottom: 0;
     z-index: 1;
   }
-  /* line 249, ../sass/style.scss */
+  /* line 265, ../sass/style.scss */
+  .main.player-number-2a .player.player2 .poison {
+    bottom: 40%;
+  }
+  /* line 269, ../sass/style.scss */
   .main.player-number-2a .player.player3 {
     display: none;
   }
-  /* line 252, ../sass/style.scss */
+  /* line 272, ../sass/style.scss */
   .main.player-number-2a .player.player4 {
     display: none;
   }
-  /* line 258, ../sass/style.scss */
+  /* line 278, ../sass/style.scss */
   .main.player-number-4 .player {
     position: absolute;
     width: 50%;
@@ -348,7 +370,7 @@ body {
     box-sizing: border-box;
     overflow: hidden;
   }
-  /* line 265, ../sass/style.scss */
+  /* line 285, ../sass/style.scss */
   .main.player-number-4 .player.player3 {
     left: 0;
     top: 0;
@@ -356,27 +378,27 @@ body {
     border-bottom: 1px solid #aaa;
     z-index: 4;
   }
-  /* line 272, ../sass/style.scss */
+  /* line 292, ../sass/style.scss */
   .main.player-number-4 .player.player1 {
     right: 0;
     top: 0;
     z-index: 3;
     border-bottom: 1px solid #aaa;
   }
-  /* line 278, ../sass/style.scss */
+  /* line 298, ../sass/style.scss */
   .main.player-number-4 .player.player4 {
     left: 0;
     bottom: 0;
     z-index: 2;
     border-right: 1px solid #aaa;
   }
-  /* line 284, ../sass/style.scss */
+  /* line 304, ../sass/style.scss */
   .main.player-number-4 .player.player2 {
     right: 0;
     bottom: 0;
     z-index: 1;
   }
-  /* line 292, ../sass/style.scss */
+  /* line 312, ../sass/style.scss */
   .main.player-number-4a .player {
     position: absolute;
     width: 100%;
@@ -385,34 +407,34 @@ body {
     box-sizing: border-box;
     overflow: hidden;
   }
-  /* line 299, ../sass/style.scss */
+  /* line 319, ../sass/style.scss */
   .main.player-number-4a .player.player1 {
     left: 0;
     top: 0;
     z-index: 4;
     border-bottom: 1px solid #aaa;
   }
-  /* line 305, ../sass/style.scss */
+  /* line 325, ../sass/style.scss */
   .main.player-number-4a .player.player2 {
     left: 0;
     top: 25%;
     z-index: 3;
     border-bottom: 1px solid #aaa;
   }
-  /* line 311, ../sass/style.scss */
+  /* line 331, ../sass/style.scss */
   .main.player-number-4a .player.player3 {
     left: 0;
     top: 50%;
     border-bottom: 1px solid #aaa;
     z-index: 2;
   }
-  /* line 317, ../sass/style.scss */
+  /* line 337, ../sass/style.scss */
   .main.player-number-4a .player.player4 {
     left: 0;
     bottom: 0;
     z-index: 1;
   }
-  /* line 325, ../sass/style.scss */
+  /* line 345, ../sass/style.scss */
   .main.player-number-4b .player {
     position: absolute;
     width: 50%;
@@ -421,37 +443,49 @@ body {
     box-sizing: border-box;
     overflow: hidden;
   }
-  /* line 332, ../sass/style.scss */
+  /* line 352, ../sass/style.scss */
   .main.player-number-4b .player.player3 {
     left: 0;
     top: 0;
     border-left: 1px solid #aaa;
     border-top: 1px solid #aaa;
     z-index: 4;
-    transform: rotate(180deg);
+    transform: rotate3d(0, 0, 1, 180deg);
+    -webkit-transform: rotate3d(0, 0, 1, 180deg);
   }
-  /* line 340, ../sass/style.scss */
+  /* line 360, ../sass/style.scss */
+  .main.player-number-4b .player.player3 .poison {
+    right: auto;
+    left: 5%;
+  }
+  /* line 365, ../sass/style.scss */
   .main.player-number-4b .player.player1 {
     right: 0;
     top: 0;
     z-index: 3;
     border-top: 1px solid #aaa;
-    transform: rotate(180deg);
+    transform: rotate3d(0, 0, 1, 180deg);
+    -webkit-transform: rotate3d(0, 0, 1, 180deg);
   }
-  /* line 347, ../sass/style.scss */
+  /* line 373, ../sass/style.scss */
   .main.player-number-4b .player.player4 {
     left: 0;
     bottom: 0;
     z-index: 2;
     border-right: 1px solid #aaa;
   }
-  /* line 353, ../sass/style.scss */
+  /* line 379, ../sass/style.scss */
   .main.player-number-4b .player.player2 {
     right: 0;
     bottom: 0;
     z-index: 1;
   }
-  /* line 361, ../sass/style.scss */
+  /* line 383, ../sass/style.scss */
+  .main.player-number-4b .player.player2 .poison {
+    right: auto;
+    left: 5%;
+  }
+  /* line 391, ../sass/style.scss */
   .main.player-number-1 .player {
     position: absolute;
     width: 100%;
@@ -460,7 +494,7 @@ body {
     box-sizing: border-box;
     overflow: hidden;
   }
-  /* line 368, ../sass/style.scss */
+  /* line 398, ../sass/style.scss */
   .main.player-number-1 .player.player1 {
     right: 0;
     top: 0;
@@ -468,34 +502,34 @@ body {
     bottom: 0;
     z-index: 3;
   }
-  /* line 375, ../sass/style.scss */
+  /* line 405, ../sass/style.scss */
   .main.player-number-1 .player.player3 {
     display: none;
   }
-  /* line 378, ../sass/style.scss */
+  /* line 408, ../sass/style.scss */
   .main.player-number-1 .player.player4 {
     display: none;
   }
-  /* line 381, ../sass/style.scss */
+  /* line 411, ../sass/style.scss */
   .main.player-number-1 .player.player2 {
     display: none;
   }
 }
-/* line 389, ../sass/style.scss */
+/* line 419, ../sass/style.scss */
 .life-block {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
 }
-/* line 394, ../sass/style.scss */
+/* line 424, ../sass/style.scss */
 .life-block .name {
   opacity: 0;
   text-align: center;
   z-index: 1;
   font-family: Helvetica;
 }
-/* line 400, ../sass/style.scss */
+/* line 430, ../sass/style.scss */
 .life-block .life {
   font-weight: bold;
   text-align: center;
@@ -504,7 +538,7 @@ body {
   line-height: 1;
   z-index: 3;
 }
-/* line 408, ../sass/style.scss */
+/* line 438, ../sass/style.scss */
 .life-block .diff {
   text-align: center;
   z-index: 1;
@@ -512,23 +546,23 @@ body {
   opacity: 0;
 }
 
-/* line 416, ../sass/style.scss */
+/* line 446, ../sass/style.scss */
 .poison {
   display: none;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.5);
   color: #fff;
   font-weight: bold;
   text-align: center;
   font-family: Helvetica;
   position: absolute;
-  bottom: 5%;
+  bottom: 10%;
   right: 5%;
   line-height: 1;
   padding: 0 10px;
   z-index: 12;
   border: 1px solid #eee;
 }
-/* line 430, ../sass/style.scss */
+/* line 460, ../sass/style.scss */
 .poison:before {
   content: '**';
   color: transparent;
@@ -537,7 +571,7 @@ body {
   background-size: contain;
 }
 
-/* line 439, ../sass/style.scss */
+/* line 469, ../sass/style.scss */
 .upperside {
   display: block;
   position: absolute;
@@ -548,7 +582,7 @@ body {
   cursor: n-resize;
   z-index: 10;
 }
-/* line 448, ../sass/style.scss */
+/* line 478, ../sass/style.scss */
 .upperside .guide {
   display: block;
   position: absolute;
@@ -559,7 +593,7 @@ body {
   right: 0;
 }
 
-/* line 459, ../sass/style.scss */
+/* line 489, ../sass/style.scss */
 .lowerside {
   display: block;
   position: absolute;
@@ -570,7 +604,7 @@ body {
   cursor: s-resize;
   z-index: 10;
 }
-/* line 468, ../sass/style.scss */
+/* line 498, ../sass/style.scss */
 .lowerside .guide {
   display: block;
   position: absolute;
@@ -581,15 +615,17 @@ body {
   right: 0;
 }
 
-/* line 479, ../sass/style.scss */
+/* line 509, ../sass/style.scss */
 .menu {
   position: absolute;
   z-index: 30;
   width: 100%;
 }
-/* line 483, ../sass/style.scss */
+/* line 513, ../sass/style.scss */
 .menu .reload {
   position: absolute;
+  background: rgba(239, 239, 239, 0.5);
+  border-radius: 5px;
   right: 0;
   top: 0;
   padding: 10px;
@@ -597,9 +633,11 @@ body {
   color: #444;
   cursor: pointer;
 }
-/* line 492, ../sass/style.scss */
+/* line 524, ../sass/style.scss */
 .menu .settings {
   position: absolute;
+  background: rgba(239, 239, 239, 0.5);
+  border-radius: 5px;
   left: 0;
   top: 0;
   padding: 10px;
@@ -608,7 +646,7 @@ body {
   cursor: pointer;
 }
 
-/* line 503, ../sass/style.scss */
+/* line 537, ../sass/style.scss */
 .settings-block {
   display: none;
   border-radius: 5px;
@@ -621,7 +659,7 @@ body {
   z-index: 999;
   color: #fff;
 }
-/* line 514, ../sass/style.scss */
+/* line 548, ../sass/style.scss */
 .settings-block .close-btn {
   position: absolute;
   right: -12px;
@@ -636,35 +674,35 @@ body {
   font-size: 18px;
   font-weight: bold;
 }
-/* line 528, ../sass/style.scss */
+/* line 562, ../sass/style.scss */
 .settings-block .setting-form {
   overflow: scroll;
   height: 100%;
   padding: 2.5% 5%;
   box-sizing: border-box;
 }
-/* line 534, ../sass/style.scss */
+/* line 568, ../sass/style.scss */
 .settings-block .setting-form .setting-group .setting-title {
   font-weight: bold;
   padding: 10px 10px 10px;
 }
-/* line 538, ../sass/style.scss */
+/* line 572, ../sass/style.scss */
 .settings-block .setting-form .setting-group .setting-input {
   padding: 0;
 }
-/* line 540, ../sass/style.scss */
+/* line 574, ../sass/style.scss */
 .settings-block .setting-form .setting-group .setting-input ul {
   display: flex;
   display: -webkit-flex;
   flex-wrap: wrap;
 }
-/* line 544, ../sass/style.scss */
+/* line 578, ../sass/style.scss */
 .settings-block .setting-form .setting-group .setting-input ul li {
   flex-grow: 1;
   -webkit-flex-grow: 1;
   margin: 0 10px 10px;
 }
-/* line 548, ../sass/style.scss */
+/* line 582, ../sass/style.scss */
 .settings-block .setting-form .setting-group .setting-input ul li span {
   display: block;
   border: 1px solid #ddd;
@@ -674,11 +712,11 @@ body {
   border-radius: 5px;
   cursor: pointer;
 }
-/* line 556, ../sass/style.scss */
+/* line 590, ../sass/style.scss */
 .settings-block .setting-form .setting-group .setting-input ul li span .fa {
   display: none;
 }
-/* line 560, ../sass/style.scss */
+/* line 594, ../sass/style.scss */
 .settings-block .setting-form .setting-group .setting-input ul li input {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -695,18 +733,18 @@ body {
   background: transparent;
   font-size: 16px;
 }
-/* line 577, ../sass/style.scss */
+/* line 611, ../sass/style.scss */
 .settings-block .setting-form .setting-group .setting-input ul li.active span {
   border: 1px solid #fff;
   background: #eee;
   color: #000;
 }
-/* line 581, ../sass/style.scss */
+/* line 615, ../sass/style.scss */
 .settings-block .setting-form .setting-group .setting-input ul li.active span .fa {
   display: inline-block;
 }
 
-/* line 592, ../sass/style.scss */
+/* line 626, ../sass/style.scss */
 .settings-bg {
   display: none;
   background: transparent;

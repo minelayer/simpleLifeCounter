@@ -70,7 +70,7 @@ $(function () {
 		$('#player-number span').on(_touch, function(){
 			playerNumber = $(this).data('player_number');
 			console.log(playerNumber);
-			$(this).parent().siblings().removeClass('active');
+			$(this).parents('.setting-input').find('ul li').removeClass('active');
 			$(this).parent().addClass('active');
 			setPlayerNumber(playerNumber);
 		});
@@ -119,7 +119,7 @@ $(function () {
 	}
 
 	function setPlayerNumber(number){ //プレイヤー数変更時
-		$('main').removeClass('player-number-2').removeClass('player-number-4').addClass('player-number-'+number);
+		$('main').removeClass().addClass('main player-number-'+number);
 		resizeCounter();
 	}
 
@@ -170,6 +170,7 @@ $(function () {
 		$('.life').text(initLife);
 		$('.diff').text(0);
 		$('.poison').text(0);
+		resizeCounter();
 		console.log(damageLog);
 		damageLog = 'start at ' + timeNow() + '\n';
 		console.log('start at ' + timeNow());
@@ -226,5 +227,6 @@ $(function () {
 
 		console.log('life is ' + playerPoison);
 	}
+
 });
 

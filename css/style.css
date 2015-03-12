@@ -105,6 +105,37 @@ body {
     display: none;
   }
   /* line 42, ../sass/style.scss */
+  .main.player-number-2a .player {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    background: #e3e3e3;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  /* line 51, ../sass/style.scss */
+  .main.player-number-2a .player.player1 {
+    left: 0;
+    border-right: 1px solid #aaa;
+    z-index: 2;
+  }
+  /* line 56, ../sass/style.scss */
+  .main.player-number-2a .player.player2 {
+    right: 0;
+    z-index: 1;
+    transform: rotate(180deg);
+  }
+  /* line 61, ../sass/style.scss */
+  .main.player-number-2a .player.player3 {
+    display: none;
+  }
+  /* line 64, ../sass/style.scss */
+  .main.player-number-2a .player.player4 {
+    display: none;
+  }
+  /* line 70, ../sass/style.scss */
   .main.player-number-4 .player {
     position: absolute;
     width: 50%;
@@ -113,7 +144,7 @@ body {
     box-sizing: border-box;
     overflow: hidden;
   }
-  /* line 49, ../sass/style.scss */
+  /* line 77, ../sass/style.scss */
   .main.player-number-4 .player.player1 {
     left: 0;
     top: 0;
@@ -121,29 +152,133 @@ body {
     border-bottom: 1px solid #aaa;
     z-index: 4;
   }
-  /* line 56, ../sass/style.scss */
+  /* line 84, ../sass/style.scss */
   .main.player-number-4 .player.player2 {
     right: 0;
     top: 0;
     z-index: 3;
     border-bottom: 1px solid #aaa;
   }
-  /* line 62, ../sass/style.scss */
+  /* line 90, ../sass/style.scss */
   .main.player-number-4 .player.player3 {
     left: 0;
     bottom: 0;
     z-index: 2;
     border-right: 1px solid #aaa;
   }
-  /* line 68, ../sass/style.scss */
+  /* line 96, ../sass/style.scss */
   .main.player-number-4 .player.player4 {
     right: 0;
     bottom: 0;
     z-index: 1;
   }
+  /* line 104, ../sass/style.scss */
+  .main.player-number-4a .player {
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    background: #e3e3e3;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  /* line 111, ../sass/style.scss */
+  .main.player-number-4a .player.player1 {
+    left: 0;
+    top: 0;
+    border-right: 1px solid #aaa;
+    z-index: 4;
+  }
+  /* line 117, ../sass/style.scss */
+  .main.player-number-4a .player.player2 {
+    left: 25%;
+    top: 0;
+    z-index: 3;
+    border-right: 1px solid #aaa;
+  }
+  /* line 123, ../sass/style.scss */
+  .main.player-number-4a .player.player3 {
+    left: 50%;
+    top: 0;
+    z-index: 2;
+    border-right: 1px solid #aaa;
+  }
+  /* line 129, ../sass/style.scss */
+  .main.player-number-4a .player.player4 {
+    right: 0;
+    top: 0;
+    z-index: 1;
+  }
+  /* line 137, ../sass/style.scss */
+  .main.player-number-4b .player {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    background: #e3e3e3;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  /* line 144, ../sass/style.scss */
+  .main.player-number-4b .player.player1 {
+    left: 0;
+    top: 0;
+    border-left: 1px solid #aaa;
+    border-top: 1px solid #aaa;
+    z-index: 4;
+    transform: rotate(180deg);
+  }
+  /* line 152, ../sass/style.scss */
+  .main.player-number-4b .player.player2 {
+    right: 0;
+    top: 0;
+    z-index: 3;
+    border-top: 1px solid #aaa;
+    transform: rotate(180deg);
+  }
+  /* line 159, ../sass/style.scss */
+  .main.player-number-4b .player.player3 {
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    border-right: 1px solid #aaa;
+  }
+  /* line 165, ../sass/style.scss */
+  .main.player-number-4b .player.player4 {
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+  /* line 173, ../sass/style.scss */
+  .main.player-number-1 .player {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #e3e3e3;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  /* line 180, ../sass/style.scss */
+  .main.player-number-1 .player.player1 {
+    right: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 3;
+  }
+  /* line 187, ../sass/style.scss */
+  .main.player-number-1 .player.player3 {
+    display: none;
+  }
+  /* line 190, ../sass/style.scss */
+  .main.player-number-1 .player.player4 {
+    display: none;
+  }
+  /* line 193, ../sass/style.scss */
+  .main.player-number-1 .player.player2 {
+    display: none;
+  }
 }
 @media only screen and (orientation: portrait) {
-  /* line 80, ../sass/style.scss */
+  /* line 203, ../sass/style.scss */
   .main.player-number-2 .player {
     position: absolute;
     width: 100%;
@@ -154,26 +289,57 @@ body {
     box-sizing: border-box;
     overflow: hidden;
   }
-  /* line 89, ../sass/style.scss */
+  /* line 212, ../sass/style.scss */
   .main.player-number-2 .player.player1 {
     top: 0;
     border-bottom: 1px solid #aaa;
     z-index: 2;
   }
-  /* line 94, ../sass/style.scss */
+  /* line 217, ../sass/style.scss */
   .main.player-number-2 .player.player2 {
     bottom: 0;
     z-index: 1;
   }
-  /* line 98, ../sass/style.scss */
+  /* line 221, ../sass/style.scss */
   .main.player-number-2 .player.player3 {
     display: none;
   }
-  /* line 101, ../sass/style.scss */
+  /* line 224, ../sass/style.scss */
   .main.player-number-2 .player.player4 {
     display: none;
   }
-  /* line 107, ../sass/style.scss */
+  /* line 230, ../sass/style.scss */
+  .main.player-number-2a .player {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    left: 0;
+    right: 0;
+    background: #e3e3e3;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  /* line 239, ../sass/style.scss */
+  .main.player-number-2a .player.player1 {
+    top: 0;
+    border-top: 1px solid #aaa;
+    z-index: 2;
+    transform: rotate(180deg);
+  }
+  /* line 245, ../sass/style.scss */
+  .main.player-number-2a .player.player2 {
+    bottom: 0;
+    z-index: 1;
+  }
+  /* line 249, ../sass/style.scss */
+  .main.player-number-2a .player.player3 {
+    display: none;
+  }
+  /* line 252, ../sass/style.scss */
+  .main.player-number-2a .player.player4 {
+    display: none;
+  }
+  /* line 258, ../sass/style.scss */
   .main.player-number-4 .player {
     position: absolute;
     width: 50%;
@@ -182,7 +348,7 @@ body {
     box-sizing: border-box;
     overflow: hidden;
   }
-  /* line 114, ../sass/style.scss */
+  /* line 265, ../sass/style.scss */
   .main.player-number-4 .player.player3 {
     left: 0;
     top: 0;
@@ -190,42 +356,146 @@ body {
     border-bottom: 1px solid #aaa;
     z-index: 4;
   }
-  /* line 121, ../sass/style.scss */
+  /* line 272, ../sass/style.scss */
   .main.player-number-4 .player.player1 {
     right: 0;
     top: 0;
     z-index: 3;
     border-bottom: 1px solid #aaa;
   }
-  /* line 127, ../sass/style.scss */
+  /* line 278, ../sass/style.scss */
   .main.player-number-4 .player.player4 {
     left: 0;
     bottom: 0;
     z-index: 2;
     border-right: 1px solid #aaa;
   }
-  /* line 133, ../sass/style.scss */
+  /* line 284, ../sass/style.scss */
   .main.player-number-4 .player.player2 {
     right: 0;
     bottom: 0;
     z-index: 1;
   }
+  /* line 292, ../sass/style.scss */
+  .main.player-number-4a .player {
+    position: absolute;
+    width: 100%;
+    height: 25%;
+    background: #e3e3e3;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  /* line 299, ../sass/style.scss */
+  .main.player-number-4a .player.player1 {
+    left: 0;
+    top: 0;
+    z-index: 4;
+    border-bottom: 1px solid #aaa;
+  }
+  /* line 305, ../sass/style.scss */
+  .main.player-number-4a .player.player2 {
+    left: 0;
+    top: 25%;
+    z-index: 3;
+    border-bottom: 1px solid #aaa;
+  }
+  /* line 311, ../sass/style.scss */
+  .main.player-number-4a .player.player3 {
+    left: 0;
+    top: 50%;
+    border-bottom: 1px solid #aaa;
+    z-index: 2;
+  }
+  /* line 317, ../sass/style.scss */
+  .main.player-number-4a .player.player4 {
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+  /* line 325, ../sass/style.scss */
+  .main.player-number-4b .player {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    background: #e3e3e3;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  /* line 332, ../sass/style.scss */
+  .main.player-number-4b .player.player3 {
+    left: 0;
+    top: 0;
+    border-left: 1px solid #aaa;
+    border-top: 1px solid #aaa;
+    z-index: 4;
+    transform: rotate(180deg);
+  }
+  /* line 340, ../sass/style.scss */
+  .main.player-number-4b .player.player1 {
+    right: 0;
+    top: 0;
+    z-index: 3;
+    border-top: 1px solid #aaa;
+    transform: rotate(180deg);
+  }
+  /* line 347, ../sass/style.scss */
+  .main.player-number-4b .player.player4 {
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    border-right: 1px solid #aaa;
+  }
+  /* line 353, ../sass/style.scss */
+  .main.player-number-4b .player.player2 {
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+  /* line 361, ../sass/style.scss */
+  .main.player-number-1 .player {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #e3e3e3;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  /* line 368, ../sass/style.scss */
+  .main.player-number-1 .player.player1 {
+    right: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 3;
+  }
+  /* line 375, ../sass/style.scss */
+  .main.player-number-1 .player.player3 {
+    display: none;
+  }
+  /* line 378, ../sass/style.scss */
+  .main.player-number-1 .player.player4 {
+    display: none;
+  }
+  /* line 381, ../sass/style.scss */
+  .main.player-number-1 .player.player2 {
+    display: none;
+  }
 }
-/* line 143, ../sass/style.scss */
+/* line 389, ../sass/style.scss */
 .life-block {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
 }
-/* line 148, ../sass/style.scss */
+/* line 394, ../sass/style.scss */
 .life-block .name {
   opacity: 0;
   text-align: center;
   z-index: 1;
   font-family: Helvetica;
 }
-/* line 154, ../sass/style.scss */
+/* line 400, ../sass/style.scss */
 .life-block .life {
   font-weight: bold;
   text-align: center;
@@ -234,7 +504,7 @@ body {
   line-height: 1;
   z-index: 3;
 }
-/* line 162, ../sass/style.scss */
+/* line 408, ../sass/style.scss */
 .life-block .diff {
   text-align: center;
   z-index: 1;
@@ -242,7 +512,7 @@ body {
   opacity: 0;
 }
 
-/* line 170, ../sass/style.scss */
+/* line 416, ../sass/style.scss */
 .poison {
   display: none;
   background: rgba(0, 0, 0, 0.7);
@@ -258,7 +528,7 @@ body {
   z-index: 12;
   border: 1px solid #eee;
 }
-/* line 184, ../sass/style.scss */
+/* line 430, ../sass/style.scss */
 .poison:before {
   content: '**';
   color: transparent;
@@ -267,7 +537,7 @@ body {
   background-size: contain;
 }
 
-/* line 193, ../sass/style.scss */
+/* line 439, ../sass/style.scss */
 .upperside {
   display: block;
   position: absolute;
@@ -278,18 +548,18 @@ body {
   cursor: n-resize;
   z-index: 10;
 }
-/* line 202, ../sass/style.scss */
+/* line 448, ../sass/style.scss */
 .upperside .guide {
   display: block;
   position: absolute;
   top: 5%;
   text-align: center;
-  color: #ccc;
+  color: rgba(0, 0, 0, 0.3);
   left: 0;
   right: 0;
 }
 
-/* line 213, ../sass/style.scss */
+/* line 459, ../sass/style.scss */
 .lowerside {
   display: block;
   position: absolute;
@@ -300,24 +570,24 @@ body {
   cursor: s-resize;
   z-index: 10;
 }
-/* line 222, ../sass/style.scss */
+/* line 468, ../sass/style.scss */
 .lowerside .guide {
   display: block;
   position: absolute;
   bottom: 5%;
   text-align: center;
-  color: #ccc;
+  color: rgba(0, 0, 0, 0.3);
   left: 0;
   right: 0;
 }
 
-/* line 233, ../sass/style.scss */
+/* line 479, ../sass/style.scss */
 .menu {
   position: absolute;
   z-index: 30;
   width: 100%;
 }
-/* line 237, ../sass/style.scss */
+/* line 483, ../sass/style.scss */
 .menu .reload {
   position: absolute;
   right: 0;
@@ -327,7 +597,7 @@ body {
   color: #444;
   cursor: pointer;
 }
-/* line 246, ../sass/style.scss */
+/* line 492, ../sass/style.scss */
 .menu .settings {
   position: absolute;
   left: 0;
@@ -338,7 +608,7 @@ body {
   cursor: pointer;
 }
 
-/* line 257, ../sass/style.scss */
+/* line 503, ../sass/style.scss */
 .settings-block {
   display: none;
   border-radius: 5px;
@@ -351,7 +621,7 @@ body {
   z-index: 999;
   color: #fff;
 }
-/* line 268, ../sass/style.scss */
+/* line 514, ../sass/style.scss */
 .settings-block .close-btn {
   position: absolute;
   right: -12px;
@@ -366,35 +636,35 @@ body {
   font-size: 18px;
   font-weight: bold;
 }
-/* line 282, ../sass/style.scss */
+/* line 528, ../sass/style.scss */
 .settings-block .setting-form {
   overflow: scroll;
   height: 100%;
   padding: 2.5% 5%;
   box-sizing: border-box;
 }
-/* line 288, ../sass/style.scss */
+/* line 534, ../sass/style.scss */
 .settings-block .setting-form .setting-group .setting-title {
   font-weight: bold;
   padding: 10px 10px 10px;
 }
-/* line 292, ../sass/style.scss */
+/* line 538, ../sass/style.scss */
 .settings-block .setting-form .setting-group .setting-input {
   padding: 0;
 }
-/* line 294, ../sass/style.scss */
+/* line 540, ../sass/style.scss */
 .settings-block .setting-form .setting-group .setting-input ul {
   display: flex;
   display: -webkit-flex;
   flex-wrap: wrap;
 }
-/* line 298, ../sass/style.scss */
+/* line 544, ../sass/style.scss */
 .settings-block .setting-form .setting-group .setting-input ul li {
   flex-grow: 1;
   -webkit-flex-grow: 1;
   margin: 0 10px 10px;
 }
-/* line 302, ../sass/style.scss */
+/* line 548, ../sass/style.scss */
 .settings-block .setting-form .setting-group .setting-input ul li span {
   display: block;
   border: 1px solid #ddd;
@@ -404,11 +674,11 @@ body {
   border-radius: 5px;
   cursor: pointer;
 }
-/* line 310, ../sass/style.scss */
+/* line 556, ../sass/style.scss */
 .settings-block .setting-form .setting-group .setting-input ul li span .fa {
   display: none;
 }
-/* line 314, ../sass/style.scss */
+/* line 560, ../sass/style.scss */
 .settings-block .setting-form .setting-group .setting-input ul li input {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -425,18 +695,18 @@ body {
   background: transparent;
   font-size: 16px;
 }
-/* line 331, ../sass/style.scss */
+/* line 577, ../sass/style.scss */
 .settings-block .setting-form .setting-group .setting-input ul li.active span {
   border: 1px solid #fff;
   background: #eee;
   color: #000;
 }
-/* line 335, ../sass/style.scss */
+/* line 581, ../sass/style.scss */
 .settings-block .setting-form .setting-group .setting-input ul li.active span .fa {
   display: inline-block;
 }
 
-/* line 346, ../sass/style.scss */
+/* line 592, ../sass/style.scss */
 .settings-bg {
   display: none;
   background: transparent;

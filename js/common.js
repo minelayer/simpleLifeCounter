@@ -228,5 +228,28 @@ $(function () {
 		console.log('life is ' + playerPoison);
 	}
 
+	function onKeyEvent() {
+		if(window.event.keyCode == 65){ //a
+			lifeEvent(0,-1)
+		}else if(window.event.keyCode == 83){ //s
+			lifeEvent(0,1)
+		}else if(window.event.keyCode == 74){ //j
+			lifeEvent(1,-1)
+		}else if(window.event.keyCode == 75){ //k
+			lifeEvent(1,1)
+		}else if(window.event.keyCode == 82){ //r
+			$('.menu .reload').animate({opacity:0},0).delay(100).animate({opacity:1},0).delay(100).animate({opacity:0},0).delay(100).animate({opacity:1},0).delay(100).animate({opacity:0},0).delay(100).animate({opacity:1},0);
+			initialize();
+		}else if(window.event.keyCode == 81){ //q
+			poisonEvent(0,-1)
+		}else if(window.event.keyCode == 87){ //w
+			poisonEvent(0,1)
+		}else if(window.event.keyCode == 85){ //u
+			poisonEvent(1,-1)
+		}else if(window.event.keyCode == 73){ //i
+			poisonEvent(1,1)
+		}else{return true;}
+	}
+	window.document.onkeydown= onKeyEvent;
 });
 

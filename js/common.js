@@ -5,7 +5,10 @@ $(function () {
 	});
 
 	// タッチイベントの設定
-	var _touch = ('ontouchstart' in document) ? 'touchstart' : 'click';
+	// var _touch = ('ontouchstart' in document) ? 'touchstart' : 'click';
+	// →jQuery mobileのtapイベントを使用
+
+	document.addEventListner
 
 	// 初期設定
 	var initLife = 20;
@@ -30,22 +33,26 @@ $(function () {
 		resizeCounter(playerNumber);
 	});
 
-	$('.upperside').on(_touch, function(){
+	$('.upperside').on('tap', function(e){
+		e.preventDefault();
 		lifeEvent($('.player').index($(this).parents('.player')),+1);
 	});
-	$('.lowerside').on(_touch, function(){
+	$('.lowerside').on('tap', function(e){
+		e.preventDefault();
 		lifeEvent($('.player').index($(this).parents('.player')),-1);
 	});
-	$('.poison').on(_touch, function(){
+	$('.poison').on('tap', function(e){
+		e.preventDefault();
 		poisonEvent($('.player').index($(this).parents('.player')),+1);
 	});
 
-	$('.menu .reload').on(_touch, function(){
+	$('.menu .reload').on('tap', function(e){
+		e.preventDefault();
 		$(this).animate({opacity:0},0).delay(100).animate({opacity:1},0).delay(100).animate({opacity:0},0).delay(100).animate({opacity:1},0).delay(100).animate({opacity:0},0).delay(100).animate({opacity:1},0);
 		initialize();
 	});
 
-	function timeNow(){
+	function timeNow(){ //時刻表記
 		var nowTime = new Date(); // 現在日時を得る
 		var nowHour = nowTime.getHours(); // 時を抜き出す
 		var nowMin = nowTime.getMinutes(); // 分を抜き出す
@@ -56,52 +63,61 @@ $(function () {
 
 	function settings(){ //設定周りの項目
 		// 設定ウインドウの開閉
-		$('.menu .settings').on(_touch, function(){
+		$('.menu .settings').on('tap', function(e){
+			e.preventDefault();
 			$(this).animate({opacity:0},0).delay(100).animate({opacity:1},0).delay(100).animate({opacity:0},0).delay(100).animate({opacity:1},0).delay(100).animate({opacity:0},0).delay(100).animate({opacity:1},0);
-			$('.settings-block').fadeIn(300);
-			$('.settings-bg').fadeIn(300);
+			$('.settings-block').fadeIn(300,function(){
+				$('.settings-bg').show();
+			});
 		});
-		$('.settings-block .close-btn, .settings-bg').on(_touch,function(){
-			$('.settings-block').fadeOut(300);
-			$('.settings-bg').fadeOut(300);
+		$('.settings-block .close-btn, .settings-bg').on('tap',function(){
+			$('.settings-block').fadeOut(300,function(){
+				$('.settings-bg').hide();
+			});
 		});
 
 		// 設定項目
-		$('#player-number span').on(_touch, function(){
+		$('#player-number span').on('tap', function(e){
+			e.preventDefault();
 			playerNumber = $(this).data('player_number');
 			console.log(playerNumber);
 			$(this).parents('.setting-input').find('ul li').removeClass('active');
 			$(this).parent().addClass('active');
 			setPlayerNumber(playerNumber);
 		});
-		$('#life-amount span').on(_touch, function(){
+		$('#life-amount span').on('tap', function(e){
+			e.preventDefault();
 			initLife = $(this).data('life_amount');
 			console.log(initLife);
 			$(this).parent().siblings().removeClass('active');
 			$(this).parent().addClass('active');
 		});
-		$('#poison-counter span').on(_touch, function(){
+		$('#poison-counter span').on('tap', function(e){
+			e.preventDefault();
 			var poisonDisp = $(this).data('poison_counter');
 			console.log(poisonDisp);
 			$(this).parent().siblings().removeClass('active');
 			$(this).parent().addClass('active');
 			setPoisonDisp(poisonDisp);
 		});
-		$('#set-fullscreen span').on(_touch, function(){
+		$('#set-fullscreen span').on('tap', function(e){
+			e.preventDefault();
 			var switchScreen = $(this).data('set_fullscreen');
 			console.log(switchScreen);
 			$(this).parent().siblings().removeClass('active');
 			$(this).parent().addClass('active');
 			switchScreen == 'set' ? setFullScreen() : cancelFullScreen();
 		});
-		/*$('#set-neversleep span').on(_touch, function(){
+		/*$('#set-neversleep span').on('tap', function(e){
+			e.preventDefault();
 			var switchNeversleep = $(this).data('neversleep');
 			console.log(switchNeversleep);
 			$(this).parent().siblings().removeClass('active');
 			$(this).parent().addClass('active');
 			switchNeversleep == 'set' ?  $('#silent')[0].play() :  $('#silent')[0].pause();
 		});*/
-		$('#name-disp span').on(_touch, function(){
+		$('#name-disp span').on('tap', function(e){
+			e.preventDefault();
 			nameDisp = $(this).data('name_disp');
 			console.log(nameDisp);
 			$(this).parent().siblings().removeClass('active');
@@ -138,7 +154,7 @@ $(function () {
 		console.log('#' + targetID + ' .name');
 	}
 
-	function setFullScreen(){
+	function setFullScreen(){ //フルスクリーン化
 		if ((document.fullScreenElement && document.fullScreenElement !== null) ||    // alternative standard method
 		(!document.mozFullScreen && !document.webkitIsFullScreen)) {              // current working methods
 			if (document.documentElement.requestFullScreen) {
@@ -151,7 +167,7 @@ $(function () {
 		}
 	}
 
-	function cancelFullScreen(){
+	function cancelFullScreen(){ //フルスクリーン停止
 		if (document.cancelFullScreen) {
 			document.cancelFullScreen();
 		} else if (document.mozCancelFullScreen) {
@@ -161,7 +177,7 @@ $(function () {
 		}
 	}
 
-	function initialize(){
+	function initialize(){ //初期化
 		for (var i = 0; i < maxPlayerNumber; i++) {
 			playerLife[i] = initLife;
 			playerPoison[i] = 0;
@@ -177,7 +193,7 @@ $(function () {
 		console.log('life is ' + playerLife);
 	}
 
-	function resizeCounter(){
+	function resizeCounter(){ //カウンターのフォントサイズ変更
 		var winH = $('.player').height();
 		var winW = $('.player').width();
 		//var actH = number == 2 ? winH : winH / 2;
@@ -201,7 +217,7 @@ $(function () {
 		//console.log('winH:'+winH+', winW:'+winW+', actH:'+actH+', actW:'+actW+', size:'+size);
 	}
 
-	function lifeEvent(target, amount){
+	function lifeEvent(target, amount){ //ライフ増減イベント
 		var targetID = '#player'+(parseInt(target)+1);
 		var targetName = $(targetID + ' .name').text();
 		diffLife[target] = diffLife[target] + amount;
@@ -218,7 +234,7 @@ $(function () {
 		console.log('life is ' + playerLife);
 		console.log('diff is ' + diffLife);
 	}
-	function poisonEvent(target, amount){
+	function poisonEvent(target, amount){ //毒カウンター増（減）イベント
 		var targetID = '#player'+(parseInt(target)+1);
 		var targetName = $(targetID + ' .name').text();
 		playerPoison[target] = playerPoison[target] == 10 ? 0 : playerPoison[target] + amount;
@@ -228,7 +244,7 @@ $(function () {
 		console.log('life is ' + playerPoison);
 	}
 
-	function onKeyEvent() {
+	function onKeyEvent() { //キー押された時の分岐
 		if(window.event.keyCode == 65){ //a
 			lifeEvent(0,-1)
 		}else if(window.event.keyCode == 83){ //s

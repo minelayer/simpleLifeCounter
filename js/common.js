@@ -65,12 +65,14 @@ $(function () {
 		// 設定ウインドウの開閉
 		$('.menu .settings').on('tap', function(e){
 			e.preventDefault();
-			$(this).animate({opacity:0},0).delay(100).animate({opacity:1},0).delay(100).animate({opacity:0},0).delay(100).animate({opacity:1},0).delay(100).animate({opacity:0},0).delay(100).animate({opacity:1},0);
+			//$(this).animate({opacity:0},0).delay(100).animate({opacity:1},0).delay(100).animate({opacity:0},0).delay(100).animate({opacity:1},0).delay(100).animate({opacity:0},0).delay(100).animate({opacity:1},0);
+			$(this).find('i').addClass('fa-spin');
 			$('.settings-block').fadeIn(300,function(){
 				$('.settings-bg').show();
 			});
 		});
 		$('.settings-block .close-btn, .settings-bg').on('tap',function(){
+			$('.menu .settings i').removeClass('fa-spin');
 			$('.settings-block').fadeOut(300,function(){
 				$('.settings-bg').hide();
 			});

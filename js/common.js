@@ -25,15 +25,15 @@ $(function () {
 		playerLife[i] = initLife;
 		diffLife[i] = 0;
 	};
-	var cookie = $.cookie("setSave");
+	var lsdata = localStorage["setSave"];
 
 	var damageLog;
 
 	resizeCounter(playerNumber);
 	settings();
 
-	if(cookie){
-		cookieLoad();
+	if(lsdata){
+		lsdataLoad();
 	}else{
 		initialize();
 	}
@@ -95,7 +95,7 @@ $(function () {
 			$(this).parents('.setting-input').find('ul li').removeClass('active');
 			$(this).parent().addClass('active');
 			setPlayerNumber(playerNumber);
-			cookieSet(null,true);
+			lsdataSet(null,true);
 		});
 		$('#life-amount span').on('tap', function(e){
 			e.preventDefault();
@@ -103,7 +103,7 @@ $(function () {
 			console.log(initLife);
 			$(this).parent().siblings().removeClass('active');
 			$(this).parent().addClass('active');
-			cookieSet(null,true);
+			lsdataSet(null,true);
 		});
 		$('#poison-counter span').on('tap', function(e){
 			e.preventDefault();
@@ -112,7 +112,7 @@ $(function () {
 			$(this).parent().siblings().removeClass('active');
 			$(this).parent().addClass('active');
 			setPoisonDisp(poisonDisp);
-			cookieSet(null,true);
+			lsdataSet(null,true);
 		});
 		$('#set-fullscreen span').on('tap', function(e){
 			e.preventDefault();
@@ -121,7 +121,7 @@ $(function () {
 			$(this).parent().siblings().removeClass('active');
 			$(this).parent().addClass('active');
 			switchScreen == 'set' ? setFullScreen() : cancelFullScreen();
-			cookieSet(null,true);
+			lsdataSet(null,true);
 		});
 		/*$('#set-neversleep span').on('tap', function(e){
 			e.preventDefault();
@@ -138,7 +138,7 @@ $(function () {
 			$(this).parent().siblings().removeClass('active');
 			$(this).parent().addClass('active');
 			setNameDisp(nameDisp);
-			cookieSet(null,true);
+			lsdataSet(null,true);
 		});
 		$('#name-input input').on('change', function(){
 			var nameInput = $(this).val();
@@ -147,7 +147,7 @@ $(function () {
 			$(this).parent().siblings().removeClass('active');
 			$(this).parent().addClass('active');
 			setNameInput(nameInput, nameTarget);
-			cookieSet(null,true);
+			lsdataSet(null,true);
 		});
 	}
 
@@ -194,61 +194,61 @@ $(function () {
 		}
 	}
 
-	function cookieSet(target,settings){
-		$.cookie('setSave','true');
+	function lsdataSet(target,settings){
+		localStorage['setSave'] = 'true';
 		if(target){
-			$.cookie("playerPoison["+target+"]",playerPoison[target]);
-			$.cookie("playerLife["+target+"]",playerLife[target]);
+			localStorage["playerPoison["+target+"]"] = playerPoison[target];
+			localStorage["playerLife["+target+"]"] = playerLife[target];
 		}else{
 			for (var i = 0; i < maxPlayerNumber; i++) {
-				$.cookie("playerPoison["+i+"]",playerPoison[i]);
-				$.cookie("playerLife["+i+"]",playerLife[i]);
+				localStorage["playerPoison["+i+"]"] = playerPoison[i];
+				localStorage["playerLife["+i+"]"] = playerLife[i];
 			};
 		}
 		if(settings){
-			$.cookie("playerNumber",playerNumber);
-			$.cookie("playerNumberActive",$('#player-number ul li').index($('#player-number ul li.active')));
-			$.cookie("initLife",initLife);
-			$.cookie("initLifeActive",$('#life-amount ul li').index($('#life-amount ul li.active')));
-			$.cookie("poisonDisp",poisonDisp);
-			$.cookie("poisonDispActive",$('#poison-counter ul li').index($('#poison-counter ul li.active')));
-			$.cookie("nameDisp",nameDisp);
-			$.cookie("nameDispActive",$('#name-disp ul li').index($('#name-disp ul li.active')));
-			$.cookie("switchScreen",switchScreen);
-			$.cookie("switchScreenActive",$('#set-fullscreen ul li').index($('#set-fullscreen ul li.active')));
+			localStorage["playerNumber"] = playerNumber;
+			localStorage["playerNumberActive"] = $('#player-number ul li').index($('#player-number ul li.active'));
+			localStorage["initLife"] = initLife;
+			localStorage["initLifeActive"] = $('#life-amount ul li').index($('#life-amount ul li.active'));
+			localStorage["poisonDisp"] = poisonDisp;
+			localStorage["poisonDispActive"] = $('#poison-counter ul li').index($('#poison-counter ul li.active'));
+			localStorage["nameDisp"] = nameDisp;
+			localStorage["nameDispActive"] = $('#name-disp ul li').index($('#name-disp ul li.active'));
+			localStorage["switchScreen"] = switchScreen;
+			localStorage["switchScreenActive"] = $('#set-fullscreen ul li').index($('#set-fullscreen ul li.active'));
 			for (var i = 0; i < maxPlayerNumber; i++) {
-				$.cookie("nameInput["+i+"]",$('#name-input ul li input').eq(i).val());
+				localStorage["nameInput["+i+"]"] = $('#name-input ul li input').eq(i).val();
 			};
 		}
 	}
 
-	function cookieLoad(){ //前回からの続きで表示
+	function lsdataLoad(){ //前回からの続きで表示
 
-		playerNumber = $.cookie("playerNumber");
-		initLife = $.cookie("initLife");
-		poisonDisp = $.cookie("poisonDisp");
-		nameDisp = $.cookie("nameDisp");
-		switchScreen = $.cookie("switchScreen");
+		playerNumber = localStorage["playerNumber"];
+		initLife = parseInt(localStorage["initLife"]);
+		poisonDisp = localStorage["poisonDisp"];
+		nameDisp = localStorage["nameDisp"];
+		switchScreen = localStorage["switchScreen"];
 
 		setNameDisp(nameDisp);
 		switchScreen == 'set' ? setFullScreen() : cancelFullScreen();
 		setPlayerNumber(playerNumber);
 		setPoisonDisp(poisonDisp);
 
-		$('#player-number ul li').removeClass('active').eq($.cookie("playerNumberActive")).addClass('active');
-		$('#life-amount ul li').removeClass('active').eq($.cookie("initLifeActive")).addClass('active');
-		$('#poison-counter ul li').removeClass('active').eq($.cookie("poisonDispActive")).addClass('active');
-		$('#name-disp ul li').removeClass('active').eq($.cookie("nameDispActive")).addClass('active');
-		$('#set-fullscreen ul li').removeClass('active').eq($.cookie("switchScreenActive")).addClass('active');
+		$('#player-number ul li').removeClass('active').eq(localStorage["playerNumberActive"]).addClass('active');
+		$('#life-amount ul li').removeClass('active').eq(localStorage["initLifeActive"]).addClass('active');
+		$('#poison-counter ul li').removeClass('active').eq(localStorage["poisonDispActive"]).addClass('active');
+		$('#name-disp ul li').removeClass('active').eq(localStorage["nameDispActive"]).addClass('active');
+		$('#set-fullscreen ul li').removeClass('active').eq(localStorage["switchScreenActive"]).addClass('active');
 
 		for (var i = 0; i < maxPlayerNumber; i++) {
-			playerLife[i] = parseInt($.cookie('playerLife['+i+']'));
-			playerPoison[i] = parseInt($.cookie('playerPoison['+i+']'));
+			playerLife[i] = parseInt(localStorage['playerLife['+i+']']);
+			playerPoison[i] = parseInt(localStorage['playerPoison['+i+']']);
 			$(".player").eq(i).find('.life').text(playerLife[i]);
 			$(".player").eq(i).find('.poison').text(playerPoison[i]);
 			$(".player").eq(i).find('.name').text(playerLife[i]);
 
-			nameInput[i] = $.cookie("nameInput["+i+"]");
+			nameInput[i] = localStorage["nameInput["+i+"]"];
 
 			setNameInput(nameInput[i], 'player'+(i+1));
 			$('#name-input ul li input').eq(i).val(nameInput[i]);
@@ -267,7 +267,7 @@ $(function () {
 		$('.diff').text(0);
 		$('.poison').text(0);
 		resizeCounter();
-		cookieSet(null,true);
+		lsdataSet(null,true);
 		console.log(damageLog);
 		damageLog = 'start at ' + timeNow() + '\n';
 		console.log('start at ' + timeNow());
@@ -305,7 +305,7 @@ $(function () {
 		var dispDiffLife = diffLife[target] > 0 ? '+' + diffLife[target] : diffLife[target];
 		playerLife[target] = playerLife[target] + amount;
 		var LifeDisp = playerLife[target];
-		cookieSet(target);
+		lsdataSet(target);
 		$(targetID+' .life').text(playerLife[target]);
 		$(targetID+' .diff').text(dispDiffLife).css({'display':'block','opacity':1}).stop().animate({'opacity':0},5000,function(){
 			damageLog += timeNow() + ' ' + targetName + ' ' + dispDiffLife + ' ： 計' + LifeDisp + '\n';
@@ -320,7 +320,7 @@ $(function () {
 		var targetID = '#player'+(parseInt(target)+1);
 		var targetName = $(targetID + ' .name').text();
 		playerPoison[target] = playerPoison[target] == 10 ? 0 : playerPoison[target] + amount;
-		cookieSet(target);
+		lsdataSet(target);
 		$(targetID+' .poison').text(playerPoison[target]);
 		damageLog += timeNow() + ' ' + targetName + ' ' + amount + '毒 ： 計' + playerPoison[target] + '毒\n';
 

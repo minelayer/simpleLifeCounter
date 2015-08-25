@@ -6,6 +6,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 <link rel="apple-touch-icon" href="img/icon.png" />
+<meta name="format-detection" content="telephone=no, email=no, address=no">
 <title>Lifecounter</title>
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/font-awesome.css">
@@ -17,13 +18,18 @@
 <body>
 
 <div class="settings-block">
-	<div class="close-btn"><i class="fa fa-times"></i></div>
 	<div class="setting-form">
+		<div class="reload-group">
+			<div class="reload"><i class="fa fa-refresh"></i> カウンターリセット</div>
+		</div>
+		<div class="reload-group">
+			<div class="setting-reflesh"><i class="fa fa-eraser"></i> 設定の初期化</div>
+		</div>
 		<div class="setting-group" id="player-number">
 			<p class="setting-title">プレイヤー数</p>
 			<div class="setting-input">
 				<ul>
-					<li class="active"><span data-player_number="2"><i class="fa fa-check"></i> 2人</span></li>
+					<li class="default active"><span data-player_number="2"><i class="fa fa-check"></i> 2人</span></li>
 					<li><span data-player_number="2a"><i class="fa fa-check"></i> 2人(反転)</span></li>
 				</ul>
 				<ul>
@@ -40,7 +46,7 @@
 			<p class="setting-title">初期ライフ</p>
 			<div class="setting-input">
 				<ul>
-					<li class="active"><span data-life_amount="20"><i class="fa fa-check"></i> 20</span></li>
+					<li class="default active"><span data-life_amount="20"><i class="fa fa-check"></i> 20</span></li>
 					<li><span data-life_amount="30"><i class="fa fa-check"></i> 30</span></li>
 					<li><span data-life_amount="40"><i class="fa fa-check"></i> 40</span></li>
 				</ul>
@@ -51,7 +57,7 @@
 			<div class="setting-input">
 				<ul>
 					<li><span data-poison_counter="block"><i class="fa fa-check"></i>使用</span></li>
-					<li class="active"><span data-poison_counter="none"><i class="fa fa-check"></i>未使用</span></li>
+					<li class="default active"><span data-poison_counter="none"><i class="fa fa-check"></i>未使用</span></li>
 				</ul>
 			</div>
 		</div>
@@ -60,7 +66,7 @@
 			<div class="setting-input">
 				<ul>
 					<li><span data-set_fullscreen="set"><i class="fa fa-check"></i>使用</span></li>
-					<li class="active"><span data-set_fullscreen="cancel"><i class="fa fa-check"></i>未使用</span></li>
+					<li class="default active"><span data-set_fullscreen="cancel"><i class="fa fa-check"></i>未使用</span></li>
 				</ul>
 			</div>
 		</div>
@@ -69,7 +75,7 @@
 			<div class="setting-input">
 				<ul>
 					<li><span data-neversleep="set"><i class="fa fa-check"></i>使用</span></li>
-					<li class="active"><span data-neversleep="cancel"><i class="fa fa-check"></i>未使用</span></li>
+					<li class="default active"><span data-neversleep="cancel"><i class="fa fa-check"></i>未使用</span></li>
 				</ul>
 				<audio id="silent" src="flyers.mp3" loop></audio>
 			</div>
@@ -79,7 +85,7 @@
 			<div class="setting-input">
 				<ul>
 					<li><span data-name_disp="1"><i class="fa fa-check"></i> 表示</span></li>
-					<li class="active"><span data-name_disp="0"><i class="fa fa-check"></i> 非表示</span></li>
+					<li class="default active"><span data-name_disp="0"><i class="fa fa-check"></i> 非表示</span></li>
 				</ul>
 			</div>
 		</div>
@@ -97,7 +103,7 @@
 			</div>
 		</div>
 		<div class="version">
-			ver. 20150401-01
+			ver. 20150825-01
 		</div>
 	</div>
 </div>
@@ -145,9 +151,10 @@
 		<div class="poison">0</div>
 	</div>
 	<div class="menu">
-		<div class="reload"><i class="fa fa-refresh"></i></div>
+		<!--div class="reload"><i class="fa fa-refresh"></i></div-->
 		<div class="settings"><i class="fa fa-cog"></i></div>
 	</div>
+	<div class="notice">↑↑↑SETTINGS/RELOAD↑↑↑</div>
 </main>
 
 </body>

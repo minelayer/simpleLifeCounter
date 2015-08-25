@@ -1,14 +1,12 @@
 $(function () {
 
-	$('main').on('touchmove', function(e) {
+	$('main').on('scrollstart', function(e) {
 		e.preventDefault();
 	});
 
 	// タッチイベントの設定
 	// var _touch = ('ontouchstart' in document) ? 'touchstart' : 'click';
 	// →jQuery mobileのtapイベントを使用
-
-	document.addEventListner
 
 	// 初期設定
 	var initLife = 20;
@@ -31,6 +29,8 @@ $(function () {
 
 	resizeCounter(playerNumber);
 	settings();
+
+	$('.notice').delay(3000).fadeOut(5000);
 
 	if(lsdata){
 		lsdataLoad();
@@ -55,12 +55,7 @@ $(function () {
 		poisonEvent($('.player').index($(this).parents('.player')),+1);
 	});
 
-	$('.menu .reload').on('tap', function(e){
-		e.preventDefault();
-		$(this).stop().animate({opacity:0},0).delay(100).animate({opacity:1},0).delay(100).animate({opacity:0},0).delay(100).animate({opacity:1},0).delay(100).animate({opacity:0},0).delay(100).animate({opacity:1},0);
-		initialize();
-	});
-
+	//hover関連の擬似実装
 	function timeNow(){ //時刻表記
 		var nowTime = new Date(); // 現在日時を得る
 		var nowHour = nowTime.getHours(); // 時を抜き出す
@@ -72,19 +67,76 @@ $(function () {
 
 	function settings(){ //設定周りの項目
 		// 設定ウインドウの開閉
+		function closeSettings(){
+			$('.menu .settings i').removeClass('fa-spin');
+			$('.settings-block, .main').removeClass('active');
+			setTimeout(function(){
+				$('.settings-bg').hide();
+			},300);
+		}
+		function openSettings(){
+			$('.menu .settings i').addClass('fa-spin');
+			$('.settings-block, .main').addClass('active');
+			setTimeout(function(){
+				$('.settings-bg').show();
+			},300);
+		}
+		$(document).on('swiperight', function(e){
+			e.preventDefault();
+			openSettings();
+		});
 		$('.menu .settings').on('tap', function(e){
 			e.preventDefault();
-			//$(this).animate({opacity:0},0).delay(100).animate({opacity:1},0).delay(100).animate({opacity:0},0).delay(100).animate({opacity:1},0).delay(100).animate({opacity:0},0).delay(100).animate({opacity:1},0);
-			$(this).find('i').addClass('fa-spin');
-			$('.settings-block').fadeIn(300,function(){
-				$('.settings-bg').show();
-			});
+			openSettings();
 		});
-		$('.settings-block .close-btn, .settings-bg').on('tap',function(){
-			$('.menu .settings i').removeClass('fa-spin');
-			$('.settings-block').fadeOut(300,function(){
-				$('.settings-bg').hide();
-			});
+		$(document).on('swipeleft', function(e){
+			e.preventDefault();
+			closeSettings();
+		});
+		$('.settings-bg').on('tap',function(e){
+			e.preventDefault();
+			closeSettings();
+		});
+
+
+		// リロードボタン
+		$('.reload').on('tap', function(e){
+			e.preventDefault();
+			$(this).find('i').addClass('fa-spin-fast');
+			setTimeout(function(){
+				$('.reload i').removeClass('fa-spin-fast');
+				closeSettings();
+			},500);
+			initialize();
+		});
+
+		//設定の初期化
+		$('.setting-reflesh').on('tap', function(e){
+			e.preventDefault();
+			playerNumber = 2;
+			setPlayerNumber(playerNumber);
+			initLife = 20;
+			poisonDisp = 'none';
+			setPoisonDisp(poisonDisp);
+			switchScreen = 'cancel';
+			cancelFullScreen();
+			nameDisp = 0;
+			setNameDisp(nameDisp);
+			setNameInput('player1', 'player1');
+			setNameInput('player2', 'player2');
+			setNameInput('player3', 'player3');
+			setNameInput('player4', 'player4');
+			for (var i = 0; i < maxPlayerNumber; i++) {
+				var j = i + 1;
+				$('#name-input ul li input').eq(i).val('player'+j);
+			}
+			$('.setting-group li').removeClass('active');
+			$('.setting-group li.default').addClass('active');
+			lsdataSet(null,true);
+			$(this).find('i').addClass('fa-jump');
+			setTimeout(function(){
+				$('.setting-reflesh i').removeClass('fa-jump');
+			},1000);
 		});
 
 		// 設定項目
@@ -152,7 +204,8 @@ $(function () {
 	}
 
 	function setPlayerNumber(number){ //プレイヤー数変更時
-		$('main').removeClass().addClass('main player-number-'+number);
+		var mainClass = $('main').hasClass('active') ? 'main active player-number-'+number : 'main player-number-'+number
+		$('main').removeClass().addClass(mainClass);
 		resizeCounter();
 	}
 
@@ -252,7 +305,6 @@ $(function () {
 
 			setNameInput(nameInput[i], 'player'+(i+1));
 			$('#name-input ul li input').eq(i).val(nameInput[i]);
-			$('#player-number ul li')
 		};
 		resizeCounter();
 	}

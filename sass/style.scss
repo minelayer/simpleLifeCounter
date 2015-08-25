@@ -12,6 +12,18 @@ body{
 }
 @media only screen and (orientation : landscape) {
 	.main{
+		position: fixed;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		width: 100%;
+		transition: all .3s;
+		-webkit-transition: all .3s;
+		background: #e3e3e3;
+		&.active{
+			left: 80%;
+		}
 		&.player-number-2{
 			.player{
 				position: absolute;
@@ -19,17 +31,16 @@ body{
 				height: 100%;
 				top: 0;
 				bottom: 0;
-				background: #e3e3e3;
 				box-sizing: border-box;
 				overflow: hidden;
 				&.player1{
 					left: 0;
 					border-right: 1px solid #aaa;
-					z-index:2;
+					z-index:5;
 				}
 				&.player2{
 					right: 0;
-					z-index:1;
+					z-index:4;
 				}
 				&.player3{
 					display: none;
@@ -46,17 +57,16 @@ body{
 				height: 100%;
 				top: 0;
 				bottom: 0;
-				background: #e3e3e3;
 				box-sizing: border-box;
 				overflow: hidden;
 				&.player1{
 					left: 0;
 					border-right: 1px solid #aaa;
-					z-index:2;
+					z-index:5;
 				}
 				&.player2{
 					right: 0;
-					z-index:1;
+					z-index:4;
 					transform: rotate3d(0,0,1,180deg);
 					-webkit-transform: rotate3d(0,0,1,180deg);
 
@@ -74,7 +84,6 @@ body{
 				position: absolute;
 				width: 50%;
 				height: 50%;
-				background: #e3e3e3;
 				box-sizing: border-box;
 				overflow: hidden;
 				&.player1{
@@ -82,24 +91,24 @@ body{
 					top:0;
 					border-right: 1px solid #aaa;
 					border-bottom: 1px solid #aaa;
-					z-index:4;
+					z-index:5;
 				}
 				&.player2{
 					right: 0;
 					top: 0;
-					z-index:3;
+					z-index:4;
 					border-bottom: 1px solid #aaa;
 				}
 				&.player3{
 					left: 0;
 					bottom:0;
-					z-index:2;
+					z-index:3;
 					border-right: 1px solid #aaa;
 				}
 				&.player4{
 					right: 0;
 					bottom: 0;
-					z-index:1;
+					z-index:2;
 				}
 			}
 		}
@@ -108,31 +117,30 @@ body{
 				position: absolute;
 				width: 25%;
 				height: 100%;
-				background: #e3e3e3;
 				box-sizing: border-box;
 				overflow: hidden;
 				&.player1{
 					left: 0;
 					top:0;
 					border-right: 1px solid #aaa;
-					z-index:4;
+					z-index:5;
 				}
 				&.player2{
 					left: 25%;
 					top: 0;
-					z-index:3;
+					z-index:4;
 					border-right: 1px solid #aaa;
 				}
 				&.player3{
 					left: 50%;
 					top:0;
-					z-index:2;
+					z-index:3;
 					border-right: 1px solid #aaa;
 				}
 				&.player4{
 					right: 0;
 					top: 0;
-					z-index:1;
+					z-index:2;
 				}
 			}
 		}
@@ -141,7 +149,6 @@ body{
 				position: absolute;
 				width: 50%;
 				height: 50%;
-				background: #e3e3e3;
 				box-sizing: border-box;
 				overflow: hidden;
 				&.player1{
@@ -149,7 +156,7 @@ body{
 					top:0;
 					border-left: 1px solid #aaa;
 					border-top: 1px solid #aaa;
-					z-index:4;
+					z-index:5;
 					transform: rotate3d(0,0,1,180deg);
 					-webkit-transform: rotate3d(0,0,1,180deg);
 					.poison{
@@ -160,7 +167,7 @@ body{
 				&.player2{
 					right: 0;
 					top: 0;
-					z-index:3;
+					z-index:4;
 					border-top: 1px solid #aaa;
 					transform: rotate3d(0,0,1,180deg);
 					-webkit-transform: rotate3d(0,0,1,180deg);
@@ -169,13 +176,13 @@ body{
 				&.player3{
 					left: 0;
 					bottom:0;
-					z-index:2;
+					z-index:3;
 					border-right: 1px solid #aaa;
 				}
 				&.player4{
 					right: 0;
 					bottom: 0;
-					z-index:1;
+					z-index:2;
 					.poison{
 						right: auto;
 						left: 5%;
@@ -188,7 +195,6 @@ body{
 				position: absolute;
 				width: 100%;
 				height: 100%;
-				background: #e3e3e3;
 				box-sizing: border-box;
 				overflow: hidden;
 				&.player1{
@@ -196,7 +202,7 @@ body{
 					top: 0;
 					left: 0;
 					bottom: 0;
-					z-index:3;
+					z-index: 3;
 				}
 				&.player3{
 					display: none;
@@ -213,6 +219,18 @@ body{
 }
 @media only screen and (orientation : portrait) {
 	.main{
+		position: fixed;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		width: 100%;
+		transition: all .3s;
+		-webkit-transition: all .3s;
+		background: #e3e3e3;
+		&.active{
+			left: 80%;
+		}
 		&.player-number-2{
 			.player{
 				position: absolute;
@@ -220,17 +238,16 @@ body{
 				height: 50%;
 				left: 0;
 				right: 0;
-				background: #e3e3e3;
 				box-sizing: border-box;
 				overflow: hidden;
 				&.player1{
 					top: 0;
 					border-bottom: 1px solid #aaa;
-					z-index:2;
+					z-index:5;
 				}
 				&.player2{
 					bottom: 0;
-					z-index:1;
+					z-index:4;
 				}
 				&.player3{
 					display: none;
@@ -247,13 +264,12 @@ body{
 				height: 50%;
 				left: 0;
 				right: 0;
-				background: #e3e3e3;
 				box-sizing: border-box;
 				overflow: hidden;
 				&.player1{
 					top: 0;
 					border-top: 1px solid #aaa;
-					z-index:2;
+					z-index:5;
 					transform: rotate3d(0,0,1,180deg);
 					-webkit-transform: rotate3d(0,0,1,180deg);
 					.poison{
@@ -262,7 +278,7 @@ body{
 				}
 				&.player2{
 					bottom: 0;
-					z-index:1;
+					z-index:4;
 					.poison{
 						bottom: 40%;
 					}
@@ -280,7 +296,6 @@ body{
 				position: absolute;
 				width: 50%;
 				height: 50%;
-				background: #e3e3e3;
 				box-sizing: border-box;
 				overflow: hidden;
 				&.player1{
@@ -288,24 +303,24 @@ body{
 					top:0;
 					border-right: 1px solid #aaa;
 					border-bottom: 1px solid #aaa;
-					z-index:4;
+					z-index:5;
 				}
 				&.player2{
 					right: 0;
 					top: 0;
-					z-index:3;
+					z-index:4;
 					border-bottom: 1px solid #aaa;
 				}
 				&.player3{
 					left: 0;
 					bottom:0;
-					z-index:2;
+					z-index:3;
 					border-right: 1px solid #aaa;
 				}
 				&.player4{
 					right: 0;
 					bottom: 0;
-					z-index:1;
+					z-index:2;
 				}
 			}
 		}
@@ -314,31 +329,30 @@ body{
 				position: absolute;
 				width: 100%;
 				height: 25%;
-				background: #e3e3e3;
 				box-sizing: border-box;
 				overflow: hidden;
 				&.player1{
 					left: 0;
 					top: 0;
-					z-index:4;
+					z-index:5;
 					border-bottom: 1px solid #aaa;
 				}
 				&.player2{
 					left: 0;
 					top: 25%;
-					z-index:3;
+					z-index:4;
 					border-bottom: 1px solid #aaa;
 				}
 				&.player3{
 					left: 0;
 					top:50% ;
 					border-bottom: 1px solid #aaa;
-					z-index:2;
+					z-index:3;
 				}
 				&.player4{
 					left: 0;
 					bottom:0;
-					z-index:1;
+					z-index:2;
 				}
 			}
 		}
@@ -347,7 +361,6 @@ body{
 				position: absolute;
 				width: 50%;
 				height: 50%;
-				background: #e3e3e3;
 				box-sizing: border-box;
 				overflow: hidden;
 				&.player3{
@@ -355,7 +368,7 @@ body{
 					top:0;
 					border-left: 1px solid #aaa;
 					border-top: 1px solid #aaa;
-					z-index:4;
+					z-index:5;
 					transform: rotate3d(0,0,1,180deg);
 					-webkit-transform: rotate3d(0,0,1,180deg);
 					.poison{
@@ -366,7 +379,7 @@ body{
 				&.player1{
 					right: 0;
 					top: 0;
-					z-index:3;
+					z-index:4;
 					border-top: 1px solid #aaa;
 					transform: rotate3d(0,0,1,180deg);
 					-webkit-transform: rotate3d(0,0,1,180deg);
@@ -374,13 +387,13 @@ body{
 				&.player4{
 					left: 0;
 					bottom:0;
-					z-index:2;
+					z-index:3;
 					border-right: 1px solid #aaa;
 				}
 				&.player2{
 					right: 0;
 					bottom: 0;
-					z-index:1;
+					z-index:2;
 					.poison{
 						right: auto;
 						left: 5%;
@@ -393,7 +406,6 @@ body{
 				position: absolute;
 				width: 100%;
 				height: 100%;
-				background: #e3e3e3;
 				box-sizing: border-box;
 				overflow: hidden;
 				&.player1{
@@ -401,7 +413,7 @@ body{
 					top: 0;
 					left: 0;
 					bottom: 0;
-					z-index:3;
+					z-index:5;
 				}
 				&.player3{
 					display: none;
@@ -535,36 +547,68 @@ body{
 	}
 }
 
+.notice{
+	position: absolute;
+	z-index: 1;
+	top: 50%;
+	left: 0;
+	padding: 10px 5px;
+	font-size: 12px;
+	line-height: 12px;
+	text-align: center;
+	margin-top: -160px;
+	width: 310px;
+	color: #666;
+	transform-origin: 16px 16px;
+	-webkit-transform-origin: 16px 16px;
+	transform: rotate(90deg);
+	-webkit-transform: rotate(90deg);
+}
+
 .settings-block{
-	display: none;
-	border-radius: 5px;
 	background: rgba(0,0,0,0.9);
 	width: 80%;
-	height: 80%;
+	//height: 100%;
 	position: absolute;
-	top: 10%;
-	left: 10%;
-	z-index:999;
+	left: -100%;
+	top: 0;
+	z-index: 999;
 	color: #fff;
-	.close-btn{
-		position: absolute;
-		right: -12px;
-		top: -12px;
-		background: #d00;
-		width: 36px;
-		height: 36px;
-		border-radius: 18px;
-		text-align: center;
-		line-height: 36px;
-		cursor: pointer;
-		font-size: 18px;
-		font-weight: bold;
+	transition: all .3s;
+	-webkit-transition: all .3s;
+	&.active{
+		left: 0;
 	}
 	.setting-form{
 		overflow: scroll;
-		height: 100%;
-		padding: 2.5% 5%;
+		//height: 100%;
 		box-sizing: border-box;
+		.reload-group{
+			padding: 10px 0;
+			border-bottom:1px solid #777;
+			.reload{
+				border: 1px solid #930;
+				background: #c30;
+				color: #fff;
+				padding: 20px;
+				text-align: center;
+				border-radius: 5px;
+				cursor: pointer;
+				margin: 0 10px;
+			}
+		}
+		.reload-group{
+			.setting-reflesh{
+				border: 1px solid #777;
+				background: #eee;
+				color: #000;
+				padding: 20px;
+				text-align: center;
+				border-radius: 5px;
+				cursor: pointer;
+				margin: 0 10px;
+			}
+		}
 		.setting-group{
 			.setting-title{
 				font-weight: bold;
@@ -588,9 +632,9 @@ body{
 							text-align: center;
 							border-radius: 5px;
 							cursor: pointer;
-								.fa{
-									display: none;
-								}
+							.fa{
+								display: none;
+							}
 						}
 						input{
 							-webkit-appearance:none;
@@ -637,4 +681,61 @@ body{
 	bottom: 0;
 	width: 100%;
 	z-index: 500;
+}
+
+.fa-spin-fast {
+  -webkit-animation: fa-spin .3s linear;
+  animation: fa-spin .3s linear;
+  animation-iteration-count: 1;
+  -webkit-animation-iteration-count: 1;
+}
+.fa-jump{
+  -webkit-animation: fa-jump .2s infinite steps(4);
+  animation: fa-jump .2s infinite steps(4);
+  animation-iteration-count: 2;
+  -webkit-animation-iteration-count: 2;
+}
+@-webkit-keyframes fa-jump {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  25% {
+    -webkit-transform: translateX(7px);
+    transform: translateX(7px);
+  }
+  50% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  75% {
+    -webkit-transform: translateX(-7px);
+    transform: translateX(-7px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+@keyframes fa-jump {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  25% {
+    -webkit-transform: translateX(7px);
+    transform: translateX(7px);
+  }
+  50% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  75% {
+    -webkit-transform: translateX(-7px);
+    transform: translateX(-7px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
 }

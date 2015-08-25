@@ -6,6 +6,7 @@
 @import "compass/reset";
 
 body{
+	background: #222;
 	font-family: sans-serif;
 	-webkit-user-select:none;
 	-webkit-tap-highlight-color:rgba(0,0,0,0);
@@ -566,7 +567,7 @@ body{
 }
 
 .settings-block{
-	background: rgba(0,0,0,0.9);
+	background: #222;
 	width: 80%;
 	//height: 100%;
 	position: absolute;
@@ -628,7 +629,7 @@ body{
 							display: block;
 							border: 1px solid #ddd;
 							color: #ddd;
-							padding: 5px;
+							padding: 10px 5px;
 							text-align: center;
 							border-radius: 5px;
 							cursor: pointer;

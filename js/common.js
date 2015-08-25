@@ -129,10 +129,7 @@ $(function () {
 			setNameInput('player2', 'player2');
 			setNameInput('player3', 'player3');
 			setNameInput('player4', 'player4');
-			for (var i = 0; i < maxPlayerNumber; i++) {
-				var j = i + 1;
-				$('#name-input ul li input').eq(i).val('player'+j);
-			}
+			$('#name-input ul li input').val('');
 			$('.setting-group li').removeClass('active');
 			$('.setting-group li.default').addClass('active');
 			lsdataSet(null,true);
@@ -205,8 +202,8 @@ $(function () {
 			lsdataSet(null,true);
 		});
 		$('#name-input input').on('change', function(){
-			var nameInput = $(this).val();
 			var nameTarget = $(this).data('player_id');
+			var nameInput = $(this).val() ? $(this).val() : nameTarget;
 			console.log(nameInput, nameTarget);
 			$(this).parent().siblings().removeClass('active');
 			$(this).parent().addClass('active');
@@ -289,7 +286,8 @@ $(function () {
 			localStorage["switchScreen"] = switchScreen;
 			localStorage["switchScreenActive"] = $('#set-fullscreen ul li').index($('#set-fullscreen ul li.active'));
 			for (var i = 0; i < maxPlayerNumber; i++) {
-				localStorage["nameInput["+i+"]"] = $('#name-input ul li input').eq(i).val();
+				var playerVal = $('#name-input ul li input').eq(i).val();
+				localStorage["nameInput["+i+"]"] = playerVal;
 			};
 		}
 	}

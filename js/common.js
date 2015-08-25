@@ -10,6 +10,7 @@ $(function () {
 
 	// 初期設定
 	var initLife = 20;
+	var iconDisp = 'active';
 	var maxPlayerNumber = 4;
 	var playerNumber = 2;
 	var poisonDisp ='none';
@@ -113,6 +114,8 @@ $(function () {
 		//設定の初期化
 		$('.setting-reflesh').on('tap', function(e){
 			e.preventDefault();
+			iconDisp = 'block';
+			setIconDisp(iconDisp);
 			playerNumber = 2;
 			setPlayerNumber(playerNumber);
 			initLife = 20;
@@ -140,6 +143,15 @@ $(function () {
 		});
 
 		// 設定項目
+		$('#icon-disp span').on('tap', function(e){
+			e.preventDefault();
+			iconDisp = $(this).data('icon_disp');
+			console.log(iconDisp);
+			$(this).parents('.setting-input').find('ul li').removeClass('active');
+			$(this).parent().addClass('active');
+			setIconDisp(iconDisp);
+			lsdataSet(null,true);
+		});
 		$('#player-number span').on('tap', function(e){
 			e.preventDefault();
 			playerNumber = $(this).data('player_number');
@@ -203,6 +215,11 @@ $(function () {
 		});
 	}
 
+	function setIconDisp(status){ //プレイヤー数変更時
+		$('.menu .settings').css({'display':status});
+		console.log(status);
+	}
+
 	function setPlayerNumber(number){ //プレイヤー数変更時
 		var mainClass = $('main').hasClass('active') ? 'main active player-number-'+number : 'main player-number-'+number
 		$('main').removeClass().addClass(mainClass);
@@ -259,6 +276,8 @@ $(function () {
 			};
 		}
 		if(settings){
+			localStorage["iconDisp"] = iconDisp;
+			localStorage["iconDispActive"] = $('#icon-disp ul li').index($('#icon-disp ul li.active'));
 			localStorage["playerNumber"] = playerNumber;
 			localStorage["playerNumberActive"] = $('#player-number ul li').index($('#player-number ul li.active'));
 			localStorage["initLife"] = initLife;
@@ -277,17 +296,20 @@ $(function () {
 
 	function lsdataLoad(){ //前回からの続きで表示
 
+		iconDisp = localStorage["iconDisp"];
 		playerNumber = localStorage["playerNumber"];
 		initLife = parseInt(localStorage["initLife"]);
 		poisonDisp = localStorage["poisonDisp"];
 		nameDisp = localStorage["nameDisp"];
 		switchScreen = localStorage["switchScreen"];
 
+		setIconDisp(iconDisp);
 		setNameDisp(nameDisp);
 		switchScreen == 'set' ? setFullScreen() : cancelFullScreen();
 		setPlayerNumber(playerNumber);
 		setPoisonDisp(poisonDisp);
 
+		$('#icon-disp ul li').removeClass('active').eq(localStorage["iconDispActive"]).addClass('active');
 		$('#player-number ul li').removeClass('active').eq(localStorage["playerNumberActive"]).addClass('active');
 		$('#life-amount ul li').removeClass('active').eq(localStorage["initLifeActive"]).addClass('active');
 		$('#poison-counter ul li').removeClass('active').eq(localStorage["poisonDispActive"]).addClass('active');

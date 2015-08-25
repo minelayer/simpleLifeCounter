@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/font-awesome.css">
 <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
-<script type="text/javascript" src="js/jquery.mobile.tap.min.js"></script>
+<script type="text/javascript" src="js/jquery.mobile.custom.min.js"></script>
 <script type="text/javascript" src="js/common.js"></script>
 </head>
 <body>
@@ -19,17 +19,17 @@
 <div class="settings-block">
 	<div class="setting-form">
 		<div class="reload-group">
-			<div class="reload"><i class="fa fa-refresh"></i> カウンターリセット</div>
+			<div class="reload button"><i class="fa fa-refresh"></i> カウンターリセット</div>
 		</div>
 		<div class="reload-group">
-			<div class="setting-reflesh"><i class="fa fa-eraser"></i> 設定の初期化</div>
+			<div class="setting-reflesh button"><i class="fa fa-eraser"></i> 設定の初期化</div>
 		</div>
 		<div class="setting-group" id="icon-disp">
 			<p class="setting-title">歯車アイコン</p>
 			<div class="setting-input">
 				<ul>
-					<li class="default active"><span data-icon_disp="block"><i class="fa fa-check"></i> 表示</span></li>
-					<li><span data-icon_disp="none"><i class="fa fa-check"></i> 非表示</span></li>
+					<li class="default active"><span class="button" data-icon_disp="block"><i class="fa fa-check"></i> 表示</span></li>
+					<li><span class="button" data-icon_disp="none"><i class="fa fa-check"></i> 非表示</span></li>
 				</ul>
 			</div>
 		</div>
@@ -37,16 +37,16 @@
 			<p class="setting-title">プレイヤー数</p>
 			<div class="setting-input">
 				<ul>
-					<li class="default active"><span data-player_number="2"><i class="fa fa-check"></i> 2人</span></li>
-					<li><span data-player_number="2a"><i class="fa fa-check"></i> 2人(反転)</span></li>
+					<li class="default active"><span class="button" data-player_number="2"><i class="fa fa-check"></i> 2人</span></li>
+					<li><span class="button" data-player_number="2a"><i class="fa fa-check"></i> 2人(反転)</span></li>
 				</ul>
 				<ul>
-					<li><span data-player_number="4"><i class="fa fa-check"></i> 4人</span></li>
-					<li><span data-player_number="4a"><i class="fa fa-check"></i> 4人(一列)</span></li>
+					<li><span class="button" data-player_number="4"><i class="fa fa-check"></i> 4人</span></li>
+					<li><span class="button" data-player_number="4a"><i class="fa fa-check"></i> 4人(一列)</span></li>
 				</ul>
 				<ul>
-					<li><span data-player_number="4b"><i class="fa fa-check"></i> 4人(反転)</span></li>
-					<li><span data-player_number="1"><i class="fa fa-check"></i> ひとり()</span></li>
+					<li><span class="button" data-player_number="4b"><i class="fa fa-check"></i> 4人(反転)</span></li>
+					<li><span class="button" data-player_number="1"><i class="fa fa-check"></i> ひとり()</span></li>
 				</ul>
 			</div>
 		</div>
@@ -54,9 +54,9 @@
 			<p class="setting-title">初期ライフ</p>
 			<div class="setting-input">
 				<ul>
-					<li class="default active"><span data-life_amount="20"><i class="fa fa-check"></i> 20</span></li>
-					<li><span data-life_amount="30"><i class="fa fa-check"></i> 30</span></li>
-					<li><span data-life_amount="40"><i class="fa fa-check"></i> 40</span></li>
+					<li class="default active"><span class="button" data-life_amount="20"><i class="fa fa-check"></i> 20</span></li>
+					<li><span class="button" data-life_amount="30"><i class="fa fa-check"></i> 30</span></li>
+					<li><span class="button" data-life_amount="40"><i class="fa fa-check"></i> 40</span></li>
 				</ul>
 			</div>
 		</div>
@@ -64,8 +64,8 @@
 			<p class="setting-title">毒カウンター</p>
 			<div class="setting-input">
 				<ul>
-					<li><span data-poison_counter="block"><i class="fa fa-check"></i>使用</span></li>
-					<li class="default active"><span data-poison_counter="none"><i class="fa fa-check"></i>未使用</span></li>
+					<li><span class="button" data-poison_counter="block"><i class="fa fa-check"></i>使用</span></li>
+					<li class="default active"><span class="button" data-poison_counter="none"><i class="fa fa-check"></i>未使用</span></li>
 				</ul>
 			</div>
 		</div>
@@ -73,8 +73,8 @@
 			<p class="setting-title">フルスクリーン（Chromeのみ）</p>
 			<div class="setting-input">
 				<ul>
-					<li><span data-set_fullscreen="set"><i class="fa fa-check"></i>使用</span></li>
-					<li class="default active"><span data-set_fullscreen="cancel"><i class="fa fa-check"></i>未使用</span></li>
+					<li><span class="button" data-set_fullscreen="set"><i class="fa fa-check"></i>使用</span></li>
+					<li class="default active"><span class="button" data-set_fullscreen="cancel"><i class="fa fa-check"></i>未使用</span></li>
 				</ul>
 			</div>
 		</div>

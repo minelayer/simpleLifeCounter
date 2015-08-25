@@ -57,6 +57,14 @@ $(function () {
 	});
 
 	//hover関連の擬似実装
+	$(document).on('vmousedown','.button',function(){
+		$(this).addClass('hover');
+	});
+	$(document).on('vmouseup',function(){
+		$('.hover').removeClass('hover');
+	});
+
+
 	function timeNow(){ //時刻表記
 		var nowTime = new Date(); // 現在日時を得る
 		var nowHour = nowTime.getHours(); // 時を抜き出す

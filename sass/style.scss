@@ -283,26 +283,26 @@ body{
 				background: #e3e3e3;
 				box-sizing: border-box;
 				overflow: hidden;
-				&.player3{
+				&.player1{
 					left: 0;
 					top:0;
 					border-right: 1px solid #aaa;
 					border-bottom: 1px solid #aaa;
 					z-index:4;
 				}
-				&.player1{
+				&.player2{
 					right: 0;
 					top: 0;
 					z-index:3;
 					border-bottom: 1px solid #aaa;
 				}
-				&.player4{
+				&.player3{
 					left: 0;
 					bottom:0;
 					z-index:2;
 					border-right: 1px solid #aaa;
 				}
-				&.player2{
+				&.player4{
 					right: 0;
 					bottom: 0;
 					z-index:1;

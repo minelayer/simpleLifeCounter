@@ -372,7 +372,7 @@ body {
     overflow: hidden;
   }
   /* line 286, ../sass/style.scss */
-  .main.player-number-4 .player.player3 {
+  .main.player-number-4 .player.player1 {
     left: 0;
     top: 0;
     border-right: 1px solid #aaa;
@@ -380,21 +380,21 @@ body {
     z-index: 4;
   }
   /* line 293, ../sass/style.scss */
-  .main.player-number-4 .player.player1 {
+  .main.player-number-4 .player.player2 {
     right: 0;
     top: 0;
     z-index: 3;
     border-bottom: 1px solid #aaa;
   }
   /* line 299, ../sass/style.scss */
-  .main.player-number-4 .player.player4 {
+  .main.player-number-4 .player.player3 {
     left: 0;
     bottom: 0;
     z-index: 2;
     border-right: 1px solid #aaa;
   }
   /* line 305, ../sass/style.scss */
-  .main.player-number-4 .player.player2 {
+  .main.player-number-4 .player.player4 {
     right: 0;
     bottom: 0;
     z-index: 1;

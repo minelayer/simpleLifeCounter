@@ -408,7 +408,7 @@ $(function () {
 	}
 
 	window.document.onkeydown = function(e) { //キー押された時の分岐
-		if($('.settings-block').is(':hidden') && !e.ctrlKey && !e.metaKey){
+		if(!$('.settings-block').hasClass('active') && !e.ctrlKey && !e.metaKey){
 			if(e.keyCode == 65){ //a
 				lifeEvent(0,-1)
 			}else if(e.keyCode == 83){ //s

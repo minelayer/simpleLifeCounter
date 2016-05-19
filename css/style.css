@@ -2,7 +2,7 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 5, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 5, ../../../../../usr/local/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -24,45 +24,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../usr/local/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../usr/local/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../usr/local/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../usr/local/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../usr/local/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../../usr/local/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../usr/local/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../usr/local/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
@@ -275,6 +275,43 @@ body {
     left: 5%;
   }
   /* line 196, ../sass/style.scss */
+  .main.player-number-4c .player {
+    position: absolute;
+    width: 33.33%;
+    height: 50%;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  /* line 202, ../sass/style.scss */
+  .main.player-number-4c .player.player1 {
+    height: 100%;
+    left: 0;
+    top: 0;
+    border-right: 1px solid #aaa;
+    z-index: 5;
+  }
+  /* line 209, ../sass/style.scss */
+  .main.player-number-4c .player.player2 {
+    left: 33.33%;
+    top: 0;
+    z-index: 4;
+  }
+  /* line 214, ../sass/style.scss */
+  .main.player-number-4c .player.player3 {
+    left: 33.33%;
+    bottom: 0;
+    z-index: 3;
+    border-top: 1px solid #aaa;
+  }
+  /* line 220, ../sass/style.scss */
+  .main.player-number-4c .player.player4 {
+    height: 100%;
+    right: 0;
+    bottom: 0;
+    border-left: 1px solid #aaa;
+    z-index: 2;
+  }
+  /* line 230, ../sass/style.scss */
   .main.player-number-1 .player {
     position: absolute;
     width: 100%;
@@ -282,7 +319,7 @@ body {
     box-sizing: border-box;
     overflow: hidden;
   }
-  /* line 202, ../sass/style.scss */
+  /* line 236, ../sass/style.scss */
   .main.player-number-1 .player.player1 {
     right: 0;
     top: 0;
@@ -290,21 +327,21 @@ body {
     bottom: 0;
     z-index: 3;
   }
-  /* line 209, ../sass/style.scss */
+  /* line 243, ../sass/style.scss */
   .main.player-number-1 .player.player3 {
     display: none;
   }
-  /* line 212, ../sass/style.scss */
+  /* line 246, ../sass/style.scss */
   .main.player-number-1 .player.player4 {
     display: none;
   }
-  /* line 215, ../sass/style.scss */
+  /* line 249, ../sass/style.scss */
   .main.player-number-1 .player.player2 {
     display: none;
   }
 }
 @media only screen and (orientation: portrait) {
-  /* line 223, ../sass/style.scss */
+  /* line 257, ../sass/style.scss */
   .main {
     position: fixed;
     left: 0;
@@ -316,11 +353,11 @@ body {
     -webkit-transition: all .3s;
     background: #e3e3e3;
   }
-  /* line 233, ../sass/style.scss */
+  /* line 267, ../sass/style.scss */
   .main.active {
     left: 80%;
   }
-  /* line 237, ../sass/style.scss */
+  /* line 271, ../sass/style.scss */
   .main.player-number-2 .player {
     position: absolute;
     width: 100%;
@@ -330,26 +367,26 @@ body {
     box-sizing: border-box;
     overflow: hidden;
   }
-  /* line 245, ../sass/style.scss */
+  /* line 279, ../sass/style.scss */
   .main.player-number-2 .player.player1 {
     top: 0;
     border-bottom: 1px solid #aaa;
     z-index: 5;
   }
-  /* line 250, ../sass/style.scss */
+  /* line 284, ../sass/style.scss */
   .main.player-number-2 .player.player2 {
     bottom: 0;
     z-index: 4;
   }
-  /* line 254, ../sass/style.scss */
+  /* line 288, ../sass/style.scss */
   .main.player-number-2 .player.player3 {
     display: none;
   }
-  /* line 257, ../sass/style.scss */
+  /* line 291, ../sass/style.scss */
   .main.player-number-2 .player.player4 {
     display: none;
   }
-  /* line 263, ../sass/style.scss */
+  /* line 297, ../sass/style.scss */
   .main.player-number-2a .player {
     position: absolute;
     width: 100%;
@@ -359,7 +396,7 @@ body {
     box-sizing: border-box;
     overflow: hidden;
   }
-  /* line 271, ../sass/style.scss */
+  /* line 305, ../sass/style.scss */
   .main.player-number-2a .player.player1 {
     top: 0;
     border-top: 1px solid #aaa;
@@ -367,28 +404,28 @@ body {
     transform: rotate3d(0, 0, 1, 180deg);
     -webkit-transform: rotate3d(0, 0, 1, 180deg);
   }
-  /* line 277, ../sass/style.scss */
+  /* line 311, ../sass/style.scss */
   .main.player-number-2a .player.player1 .poison {
     bottom: 40%;
   }
-  /* line 281, ../sass/style.scss */
+  /* line 315, ../sass/style.scss */
   .main.player-number-2a .player.player2 {
     bottom: 0;
     z-index: 4;
   }
-  /* line 284, ../sass/style.scss */
+  /* line 318, ../sass/style.scss */
   .main.player-number-2a .player.player2 .poison {
     bottom: 40%;
   }
-  /* line 288, ../sass/style.scss */
+  /* line 322, ../sass/style.scss */
   .main.player-number-2a .player.player3 {
     display: none;
   }
-  /* line 291, ../sass/style.scss */
+  /* line 325, ../sass/style.scss */
   .main.player-number-2a .player.player4 {
     display: none;
   }
-  /* line 297, ../sass/style.scss */
+  /* line 331, ../sass/style.scss */
   .main.player-number-4 .player {
     position: absolute;
     width: 50%;
@@ -396,7 +433,7 @@ body {
     box-sizing: border-box;
     overflow: hidden;
   }
-  /* line 303, ../sass/style.scss */
+  /* line 337, ../sass/style.scss */
   .main.player-number-4 .player.player1 {
     left: 0;
     top: 0;
@@ -404,27 +441,27 @@ body {
     border-bottom: 1px solid #aaa;
     z-index: 5;
   }
-  /* line 310, ../sass/style.scss */
+  /* line 344, ../sass/style.scss */
   .main.player-number-4 .player.player2 {
     right: 0;
     top: 0;
     z-index: 4;
     border-bottom: 1px solid #aaa;
   }
-  /* line 316, ../sass/style.scss */
+  /* line 350, ../sass/style.scss */
   .main.player-number-4 .player.player3 {
     left: 0;
     bottom: 0;
     z-index: 3;
     border-right: 1px solid #aaa;
   }
-  /* line 322, ../sass/style.scss */
+  /* line 356, ../sass/style.scss */
   .main.player-number-4 .player.player4 {
     right: 0;
     bottom: 0;
     z-index: 2;
   }
-  /* line 330, ../sass/style.scss */
+  /* line 364, ../sass/style.scss */
   .main.player-number-4a .player {
     position: absolute;
     width: 100%;
@@ -432,34 +469,34 @@ body {
     box-sizing: border-box;
     overflow: hidden;
   }
-  /* line 336, ../sass/style.scss */
+  /* line 370, ../sass/style.scss */
   .main.player-number-4a .player.player1 {
     left: 0;
     top: 0;
     z-index: 5;
     border-bottom: 1px solid #aaa;
   }
-  /* line 342, ../sass/style.scss */
+  /* line 376, ../sass/style.scss */
   .main.player-number-4a .player.player2 {
     left: 0;
     top: 25%;
     z-index: 4;
     border-bottom: 1px solid #aaa;
   }
-  /* line 348, ../sass/style.scss */
+  /* line 382, ../sass/style.scss */
   .main.player-number-4a .player.player3 {
     left: 0;
     top: 50%;
     border-bottom: 1px solid #aaa;
     z-index: 3;
   }
-  /* line 354, ../sass/style.scss */
+  /* line 388, ../sass/style.scss */
   .main.player-number-4a .player.player4 {
     left: 0;
     bottom: 0;
     z-index: 2;
   }
-  /* line 362, ../sass/style.scss */
+  /* line 396, ../sass/style.scss */
   .main.player-number-4b .player {
     position: absolute;
     width: 50%;
@@ -467,7 +504,7 @@ body {
     box-sizing: border-box;
     overflow: hidden;
   }
-  /* line 368, ../sass/style.scss */
+  /* line 402, ../sass/style.scss */
   .main.player-number-4b .player.player3 {
     left: 0;
     top: 0;
@@ -477,12 +514,12 @@ body {
     transform: rotate3d(0, 0, 1, 180deg);
     -webkit-transform: rotate3d(0, 0, 1, 180deg);
   }
-  /* line 376, ../sass/style.scss */
+  /* line 410, ../sass/style.scss */
   .main.player-number-4b .player.player3 .poison {
     right: auto;
     left: 5%;
   }
-  /* line 381, ../sass/style.scss */
+  /* line 415, ../sass/style.scss */
   .main.player-number-4b .player.player1 {
     right: 0;
     top: 0;
@@ -491,25 +528,25 @@ body {
     transform: rotate3d(0, 0, 1, 180deg);
     -webkit-transform: rotate3d(0, 0, 1, 180deg);
   }
-  /* line 389, ../sass/style.scss */
+  /* line 423, ../sass/style.scss */
   .main.player-number-4b .player.player4 {
     left: 0;
     bottom: 0;
     z-index: 3;
     border-right: 1px solid #aaa;
   }
-  /* line 395, ../sass/style.scss */
+  /* line 429, ../sass/style.scss */
   .main.player-number-4b .player.player2 {
     right: 0;
     bottom: 0;
     z-index: 2;
   }
-  /* line 399, ../sass/style.scss */
+  /* line 433, ../sass/style.scss */
   .main.player-number-4b .player.player2 .poison {
     right: auto;
     left: 5%;
   }
-  /* line 407, ../sass/style.scss */
+  /* line 441, ../sass/style.scss */
   .main.player-number-1 .player {
     position: absolute;
     width: 100%;
@@ -517,7 +554,7 @@ body {
     box-sizing: border-box;
     overflow: hidden;
   }
-  /* line 413, ../sass/style.scss */
+  /* line 447, ../sass/style.scss */
   .main.player-number-1 .player.player1 {
     right: 0;
     top: 0;
@@ -525,34 +562,34 @@ body {
     bottom: 0;
     z-index: 5;
   }
-  /* line 420, ../sass/style.scss */
+  /* line 454, ../sass/style.scss */
   .main.player-number-1 .player.player3 {
     display: none;
   }
-  /* line 423, ../sass/style.scss */
+  /* line 457, ../sass/style.scss */
   .main.player-number-1 .player.player4 {
     display: none;
   }
-  /* line 426, ../sass/style.scss */
+  /* line 460, ../sass/style.scss */
   .main.player-number-1 .player.player2 {
     display: none;
   }
 }
-/* line 434, ../sass/style.scss */
+/* line 468, ../sass/style.scss */
 .life-block {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
 }
-/* line 439, ../sass/style.scss */
+/* line 473, ../sass/style.scss */
 .life-block .name {
   opacity: 0;
   text-align: center;
   z-index: 1;
   font-family: Helvetica;
 }
-/* line 445, ../sass/style.scss */
+/* line 479, ../sass/style.scss */
 .life-block .life {
   font-weight: bold;
   text-align: center;
@@ -561,7 +598,7 @@ body {
   line-height: 1;
   z-index: 3;
 }
-/* line 453, ../sass/style.scss */
+/* line 487, ../sass/style.scss */
 .life-block .diff {
   text-align: center;
   z-index: 1;
@@ -569,7 +606,7 @@ body {
   opacity: 0;
 }
 
-/* line 461, ../sass/style.scss */
+/* line 495, ../sass/style.scss */
 .poison {
   display: none;
   background: rgba(0, 0, 0, 0.5);
@@ -585,7 +622,7 @@ body {
   z-index: 12;
   border: 1px solid #eee;
 }
-/* line 475, ../sass/style.scss */
+/* line 509, ../sass/style.scss */
 .poison:before {
   content: '**';
   color: transparent;
@@ -594,7 +631,7 @@ body {
   background-size: contain;
 }
 
-/* line 484, ../sass/style.scss */
+/* line 518, ../sass/style.scss */
 .upperside {
   display: block;
   position: absolute;
@@ -605,7 +642,7 @@ body {
   cursor: n-resize;
   z-index: 10;
 }
-/* line 493, ../sass/style.scss */
+/* line 527, ../sass/style.scss */
 .upperside .guide {
   display: block;
   position: absolute;
@@ -616,7 +653,7 @@ body {
   right: 0;
 }
 
-/* line 504, ../sass/style.scss */
+/* line 538, ../sass/style.scss */
 .lowerside {
   display: block;
   position: absolute;
@@ -627,7 +664,7 @@ body {
   cursor: s-resize;
   z-index: 10;
 }
-/* line 513, ../sass/style.scss */
+/* line 547, ../sass/style.scss */
 .lowerside .guide {
   display: block;
   position: absolute;
@@ -638,13 +675,13 @@ body {
   right: 0;
 }
 
-/* line 524, ../sass/style.scss */
+/* line 558, ../sass/style.scss */
 .menu {
   position: absolute;
   z-index: 30;
   width: 100%;
 }
-/* line 528, ../sass/style.scss */
+/* line 562, ../sass/style.scss */
 .menu .reload {
   position: absolute;
   background: rgba(239, 239, 239, 0.5);
@@ -656,7 +693,7 @@ body {
   color: #444;
   cursor: pointer;
 }
-/* line 539, ../sass/style.scss */
+/* line 573, ../sass/style.scss */
 .menu .settings {
   position: absolute;
   background: rgba(239, 239, 239, 0.5);
@@ -669,7 +706,7 @@ body {
   cursor: pointer;
 }
 
-/* line 552, ../sass/style.scss */
+/* line 586, ../sass/style.scss */
 .notice {
   position: absolute;
   z-index: 1;
@@ -688,7 +725,7 @@ body {
   -webkit-transform: rotate(90deg);
 }
 
-/* line 570, ../sass/style.scss */
+/* line 604, ../sass/style.scss */
 .settings-block {
   background: #222;
   width: 80%;
@@ -700,25 +737,25 @@ body {
   transition: all .3s;
   -webkit-transition: all .3s;
 }
-/* line 581, ../sass/style.scss */
+/* line 615, ../sass/style.scss */
 .settings-block.active {
   left: 0;
 }
-/* line 585, ../sass/style.scss */
+/* line 619, ../sass/style.scss */
 .settings-block .button.hover {
   opacity: 0.7;
 }
-/* line 589, ../sass/style.scss */
+/* line 623, ../sass/style.scss */
 .settings-block .setting-form {
   overflow: scroll;
   box-sizing: border-box;
 }
-/* line 593, ../sass/style.scss */
+/* line 627, ../sass/style.scss */
 .settings-block .setting-form .reload-group {
   padding: 10px 0;
   border-bottom: 1px solid #777;
 }
-/* line 596, ../sass/style.scss */
+/* line 630, ../sass/style.scss */
 .settings-block .setting-form .reload-group .reload {
   border: 1px solid #930;
   background: #c30;
@@ -729,7 +766,7 @@ body {
   cursor: pointer;
   margin: 0 10px;
 }
-/* line 606, ../sass/style.scss */
+/* line 640, ../sass/style.scss */
 .settings-block .setting-form .reload-group .setting-reflesh {
   border: 1px solid #777;
   background: #eee;
@@ -740,28 +777,28 @@ body {
   cursor: pointer;
   margin: 0 10px;
 }
-/* line 618, ../sass/style.scss */
+/* line 652, ../sass/style.scss */
 .settings-block .setting-form .setting-group .setting-title {
   font-weight: bold;
   padding: 10px 10px 10px;
 }
-/* line 622, ../sass/style.scss */
+/* line 656, ../sass/style.scss */
 .settings-block .setting-form .setting-group .setting-input {
   padding: 0;
 }
-/* line 624, ../sass/style.scss */
+/* line 658, ../sass/style.scss */
 .settings-block .setting-form .setting-group .setting-input ul {
   display: flex;
   display: -webkit-flex;
   flex-wrap: wrap;
 }
-/* line 628, ../sass/style.scss */
+/* line 662, ../sass/style.scss */
 .settings-block .setting-form .setting-group .setting-input ul li {
   flex-grow: 1;
   -webkit-flex-grow: 1;
   margin: 0 10px 10px;
 }
-/* line 632, ../sass/style.scss */
+/* line 666, ../sass/style.scss */
 .settings-block .setting-form .setting-group .setting-input ul li span {
   display: block;
   border: 1px solid #ddd;
@@ -771,11 +808,11 @@ body {
   border-radius: 5px;
   cursor: pointer;
 }
-/* line 640, ../sass/style.scss */
+/* line 674, ../sass/style.scss */
 .settings-block .setting-form .setting-group .setting-input ul li span .fa {
   display: none;
 }
-/* line 644, ../sass/style.scss */
+/* line 678, ../sass/style.scss */
 .settings-block .setting-form .setting-group .setting-input ul li input {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -792,22 +829,22 @@ body {
   background: transparent;
   font-size: 16px;
 }
-/* line 661, ../sass/style.scss */
+/* line 695, ../sass/style.scss */
 .settings-block .setting-form .setting-group .setting-input ul li.active span {
   border: 1px solid #fff;
   background: #eee;
   color: #000;
 }
-/* line 665, ../sass/style.scss */
+/* line 699, ../sass/style.scss */
 .settings-block .setting-form .setting-group .setting-input ul li.active span .fa {
   display: inline-block;
 }
-/* line 674, ../sass/style.scss */
+/* line 708, ../sass/style.scss */
 .settings-block .setting-form .version {
   padding: 10px;
 }
 
-/* line 679, ../sass/style.scss */
+/* line 713, ../sass/style.scss */
 .settings-bg {
   display: none;
   background: transparent;
@@ -820,7 +857,7 @@ body {
   z-index: 500;
 }
 
-/* line 691, ../sass/style.scss */
+/* line 725, ../sass/style.scss */
 .fa-spin-fast {
   -webkit-animation: fa-spin .3s linear;
   animation: fa-spin .3s linear;
@@ -828,7 +865,7 @@ body {
   -webkit-animation-iteration-count: 1;
 }
 
-/* line 697, ../sass/style.scss */
+/* line 731, ../sass/style.scss */
 .fa-jump {
   -webkit-animation: fa-jump 0.2s infinite steps(4);
   animation: fa-jump 0.2s infinite steps(4);

@@ -192,6 +192,40 @@ body{
 				}
 			}
 		}
+		&.player-number-4c{
+			.player{
+				position: absolute;
+				width: 33.33%;
+				height: 50%;
+				box-sizing: border-box;
+				overflow: hidden;
+				&.player1{
+					height: 100%;
+					left: 0;
+					top:0;
+					border-right: 1px solid #aaa;
+					z-index:5;
+				}
+				&.player2{
+					left: 33.33%;
+					top: 0;
+					z-index:4;
+				}
+				&.player3{
+					left: 33.33%;
+					bottom:0;
+					z-index:3;
+					border-top: 1px solid #aaa;
+				}
+				&.player4{
+					height: 100%;
+					right: 0;
+					bottom: 0;
+					border-left: 1px solid #aaa;
+					z-index:2;
+				}
+			}
+		}
 		&.player-number-1{
 			.player{
 				position: absolute;

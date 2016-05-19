@@ -195,11 +195,11 @@ body{
 		&.player-number-4c{
 			.player{
 				position: absolute;
-				width: 33.33%;
 				height: 50%;
 				box-sizing: border-box;
 				overflow: hidden;
 				&.player1{
+					width: 30%;
 					height: 100%;
 					left: 0;
 					top:0;
@@ -207,17 +207,20 @@ body{
 					z-index:5;
 				}
 				&.player2{
-					left: 33.33%;
+					width: 40%;
+					left: 30%;
 					top: 0;
 					z-index:4;
 				}
 				&.player3{
-					left: 33.33%;
+					width: 40%;
+					left: 30%;
 					bottom:0;
 					z-index:3;
 					border-top: 1px solid #aaa;
 				}
 				&.player4{
+					width: 30%;
 					height: 100%;
 					right: 0;
 					bottom: 0;
@@ -434,6 +437,43 @@ body{
 						right: auto;
 						left: 5%;
 					}
+				}
+			}
+		}
+		&.player-number-4c{
+			.player{
+				position: absolute;
+				width: 100%;
+				box-sizing: border-box;
+				overflow: hidden;
+				&.player2{
+					height: 30%;
+					left: 0;
+					top: 0;
+					z-index:5;
+					border-bottom: 1px solid #aaa;
+				}
+				&.player1{
+					right: 0;
+					width: 50%;
+					height: 40%;
+					top: 30%;
+					z-index:4;
+					border-left: 1px solid #aaa;
+				}
+				&.player3{
+					left: 0;
+					width: 50%;
+					height: 40%;
+					top: 30%;
+					z-index:3;
+				}
+				&.player4{
+					height: 30%;
+					border-top: 1px solid #aaa;
+					left: 0;
+					bottom:0;
+					z-index:2;
 				}
 			}
 		}

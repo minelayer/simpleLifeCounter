@@ -1,3 +1,5 @@
+var damageLog = "";
+
 $(function () {
 
 	$('main').on('scrollstart', function(e) {
@@ -26,7 +28,6 @@ $(function () {
 	};
 	var lsdata = localStorage["setSave"];
 
-	var damageLog;
 
 	resizeCounter(playerNumber);
 	settings();
@@ -45,10 +46,13 @@ $(function () {
 
 	$('.upperside').on('tap', function(e){
 		e.preventDefault();
+		$(this).stop().css({backgroundColor: '#300', opacity: 0.1}).animate({opacity: 0},200);
 		lifeEvent($('.player').index($(this).parents('.player')),+1);
 	});
 	$('.lowerside').on('tap', function(e){
 		e.preventDefault();
+		$(this).stop().css({backgroundColor: '#300', opacity: 0.1}).animate({opacity: 0},200);
+		$(this).addClass('active');
 		lifeEvent($('.player').index($(this).parents('.player')),-1);
 	});
 	$('.poison').on('tap', function(e){
@@ -432,4 +436,3 @@ $(function () {
 		}
 	}
 });
-

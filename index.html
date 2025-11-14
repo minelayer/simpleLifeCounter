@@ -8,79 +8,77 @@
 <link rel="apple-touch-icon" href="img/icon.png" />
 <meta name="format-detection" content="telephone=no, email=no, address=no">
 <title>Lifecounter</title>
-<link rel="stylesheet" href="css/style.css?20160519-02">
-<link rel="stylesheet" href="css/font-awesome.css">
-<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
-<script type="text/javascript" src="js/jquery.mobile.custom.min.js"></script>
-<script type="text/javascript" src="js/common.js?20160519-02"></script>
+<link rel="stylesheet" href="css/style.css?20240601">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-H1+3sMqxsVXni4eWh05rq6ArlTc95xJMu38xpv8uKXu95syEHCqB6f+GO6zkRgZNpmjDoE7YQDdyCjTiM/aH3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script type="module" src="js/app.js"></script>
 </head>
 <body>
 
 <div class="settings-block">
 	<div class="setting-form">
-		<div class="reload-group">
-			<div class="reload button"><i class="fa fa-refresh"></i> カウンターリセット</div>
-		</div>
-		<div class="reload-group">
-			<div class="setting-reflesh button"><i class="fa fa-eraser"></i> 設定の初期化</div>
-		</div>
-		<div class="setting-group" id="icon-disp">
-			<p class="setting-title">歯車アイコン</p>
-			<div class="setting-input">
-				<ul>
-					<li class="default active"><span class="button" data-icon_disp="block"><i class="fa fa-check"></i> 表示</span></li>
-					<li><span class="button" data-icon_disp="none"><i class="fa fa-check"></i> 非表示</span></li>
-				</ul>
-			</div>
-		</div>
-		<div class="setting-group" id="player-number">
-			<p class="setting-title">プレイヤー数</p>
-			<div class="setting-input">
-				<ul>
-					<li class="default active"><span class="button" data-player_number="2"><i class="fa fa-check"></i> 2人</span></li>
-					<li><span class="button" data-player_number="2a"><i class="fa fa-check"></i> 2人(反転)</span></li>
-				</ul>
-				<ul>
-					<li><span class="button" data-player_number="4"><i class="fa fa-check"></i> 4人</span></li>
-					<li><span class="button" data-player_number="4a"><i class="fa fa-check"></i> 4人(一列)</span></li>
-				</ul>
-				<ul>
-					<li><span class="button" data-player_number="4b"><i class="fa fa-check"></i> 4人(反転)</span></li>
-					<li><span class="button" data-player_number="4c"><i class="fa fa-check"></i> 4人(特殊)</span></li>
-				</ul>
-				<ul>
-					<li><span class="button" data-player_number="1"><i class="fa fa-check"></i> ひとり()</span></li>
-				</ul>
-			</div>
-		</div>
-		<div class="setting-group" id="life-amount">
-			<p class="setting-title">初期ライフ</p>
-			<div class="setting-input">
-				<ul>
-					<li class="default active"><span class="button" data-life_amount="20"><i class="fa fa-check"></i> 20</span></li>
-					<li><span class="button" data-life_amount="30"><i class="fa fa-check"></i> 30</span></li>
-					<li><span class="button" data-life_amount="40"><i class="fa fa-check"></i> 40</span></li>
-				</ul>
-			</div>
-		</div>
-		<div class="setting-group" id="poison-counter">
-			<p class="setting-title">毒カウンター</p>
-			<div class="setting-input">
-				<ul>
-					<li><span class="button" data-poison_counter="block"><i class="fa fa-check"></i>使用</span></li>
-					<li class="default active"><span class="button" data-poison_counter="none"><i class="fa fa-check"></i>未使用</span></li>
-				</ul>
-			</div>
-		</div>
-		<div class="setting-group" id="set-fullscreen">
-			<p class="setting-title">フルスクリーン（Chromeのみ）</p>
-			<div class="setting-input">
-				<ul>
-					<li><span class="button" data-set_fullscreen="set"><i class="fa fa-check"></i>使用</span></li>
-					<li class="default active"><span class="button" data-set_fullscreen="cancel"><i class="fa fa-check"></i>未使用</span></li>
-				</ul>
-			</div>
-		</div>
+                <div class="reload-group">
+                        <button type="button" class="reload button" aria-label="カウンターリセット"><i class="fa-solid fa-rotate-right" aria-hidden="true"></i> カウンターリセット</button>
+                </div>
+                <div class="reload-group">
+                        <button type="button" class="setting-reflesh button" aria-label="設定の初期化"><i class="fa-solid fa-eraser" aria-hidden="true"></i> 設定の初期化</button>
+                </div>
+                <div class="setting-group" id="icon-disp">
+                        <p class="setting-title">歯車アイコン</p>
+                        <div class="setting-input">
+                                <ul>
+                                        <li class="default active"><button type="button" class="button" data-icon_disp="block"><i class="fa-solid fa-check" aria-hidden="true"></i> 表示</button></li>
+                                        <li><button type="button" class="button" data-icon_disp="none"><i class="fa-solid fa-check" aria-hidden="true"></i> 非表示</button></li>
+                                </ul>
+                        </div>
+                </div>
+                <div class="setting-group" id="player-number">
+                        <p class="setting-title">プレイヤー数</p>
+                        <div class="setting-input">
+                                <ul>
+                                        <li class="default active"><button type="button" class="button" data-player_number="2"><i class="fa-solid fa-check" aria-hidden="true"></i> 2人</button></li>
+                                        <li><button type="button" class="button" data-player_number="2a"><i class="fa-solid fa-check" aria-hidden="true"></i> 2人(反転)</button></li>
+                                </ul>
+                                <ul>
+                                        <li><button type="button" class="button" data-player_number="4"><i class="fa-solid fa-check" aria-hidden="true"></i> 4人</button></li>
+                                        <li><button type="button" class="button" data-player_number="4a"><i class="fa-solid fa-check" aria-hidden="true"></i> 4人(一列)</button></li>
+                                </ul>
+                                <ul>
+                                        <li><button type="button" class="button" data-player_number="4b"><i class="fa-solid fa-check" aria-hidden="true"></i> 4人(反転)</button></li>
+                                        <li><button type="button" class="button" data-player_number="4c"><i class="fa-solid fa-check" aria-hidden="true"></i> 4人(特殊)</button></li>
+                                </ul>
+                                <ul>
+                                        <li><button type="button" class="button" data-player_number="1"><i class="fa-solid fa-check" aria-hidden="true"></i> ひとり()</button></li>
+                                </ul>
+                        </div>
+                </div>
+                <div class="setting-group" id="life-amount">
+                        <p class="setting-title">初期ライフ</p>
+                        <div class="setting-input">
+                                <ul>
+                                        <li class="default active"><button type="button" class="button" data-life_amount="20"><i class="fa-solid fa-check" aria-hidden="true"></i> 20</button></li>
+                                        <li><button type="button" class="button" data-life_amount="30"><i class="fa-solid fa-check" aria-hidden="true"></i> 30</button></li>
+                                        <li><button type="button" class="button" data-life_amount="40"><i class="fa-solid fa-check" aria-hidden="true"></i> 40</button></li>
+                                </ul>
+                        </div>
+                </div>
+                <div class="setting-group" id="poison-counter">
+                        <p class="setting-title">毒カウンター</p>
+                        <div class="setting-input">
+                                <ul>
+                                        <li><button type="button" class="button" data-poison_counter="block"><i class="fa-solid fa-check" aria-hidden="true"></i>使用</button></li>
+                                        <li class="default active"><button type="button" class="button" data-poison_counter="none"><i class="fa-solid fa-check" aria-hidden="true"></i>未使用</button></li>
+                                </ul>
+                        </div>
+                </div>
+                <div class="setting-group" id="set-fullscreen">
+                        <p class="setting-title">フルスクリーン（Chromeのみ）</p>
+                        <div class="setting-input">
+                                <ul>
+                                        <li><button type="button" class="button" data-set_fullscreen="set"><i class="fa-solid fa-check" aria-hidden="true"></i>使用</button></li>
+                                        <li class="default active"><button type="button" class="button" data-set_fullscreen="cancel"><i class="fa-solid fa-check" aria-hidden="true"></i>未使用</button></li>
+                                </ul>
+                        </div>
+                </div>
 		<!-- div class="setting-group" id="set-neversleep">
 			<p class="setting-title">自動ロック抑制（Safariのみ）</p>
 			<div class="setting-input">
@@ -91,15 +89,15 @@
 				<audio id="silent" src="flyers.mp3" loop></audio>
 			</div>
 		</div -->
-		<div class="setting-group" id="name-disp">
-			<p class="setting-title">名前表示</p>
-			<div class="setting-input">
-				<ul>
-					<li><span data-name_disp="1"><i class="fa fa-check"></i> 表示</span></li>
-					<li class="default active"><span data-name_disp="0"><i class="fa fa-check"></i> 非表示</span></li>
-				</ul>
-			</div>
-		</div>
+                <div class="setting-group" id="name-disp">
+                        <p class="setting-title">名前表示</p>
+                        <div class="setting-input">
+                                <ul>
+                                        <li><button type="button" class="button" data-name_disp="1"><i class="fa-solid fa-check" aria-hidden="true"></i> 表示</button></li>
+                                        <li class="default active"><button type="button" class="button" data-name_disp="0"><i class="fa-solid fa-check" aria-hidden="true"></i> 非表示</button></li>
+                                </ul>
+                        </div>
+                </div>
 		<div class="setting-group" id="name-input">
 			<p class="setting-title">名前入力</p>
 			<div class="setting-input">
@@ -113,9 +111,9 @@
 				</ul>
 			</div>
 		</div>
-		<div class="version">
-			ver. 20160519-02
-		</div>
+                <div class="version">
+                        ver. 20240601
+                </div>
 	</div>
 </div>
 <div class="settings-bg"></div>
@@ -162,8 +160,8 @@
 		<div class="poison">0</div>
 	</div>
 	<div class="menu">
-		<!--div class="reload"><i class="fa fa-refresh"></i></div-->
-		<div class="settings"><i class="fa fa-cog"></i></div>
+                <!--div class="reload"><i class="fa-solid fa-rotate-right"></i></div-->
+                <div class="settings" aria-label="設定を開く" role="button" tabindex="0"><i class="fa-solid fa-gear" aria-hidden="true"></i></div>
 	</div>
 	<div class="notice">↑↑↑SETTINGS/RELOAD↑↑↑</div>
 </main>

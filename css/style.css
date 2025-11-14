@@ -76,6 +76,19 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+button:focus-visible {
+  outline: 2px solid #ff9800;
+  outline-offset: 2px;
+}
+
 @media only screen and (orientation: landscape) {
   /* line 16, ../sass/style.scss */
   .main {
@@ -632,6 +645,9 @@ body {
   z-index: 1;
   font-family: Helvetica;
 }
+body.show-names .life-block .name {
+  opacity: 1;
+}
 /* line 519, ../sass/style.scss */
 .life-block .life {
   font-weight: bold;
@@ -647,6 +663,12 @@ body {
   z-index: 1;
   font-family: Helvetica;
   opacity: 0;
+}
+.life-block .diff {
+  transition: opacity 0.3s ease;
+}
+.life-block .diff.is-visible {
+  opacity: 1;
 }
 
 /* line 535, ../sass/style.scss */
@@ -766,6 +788,11 @@ body {
   -webkit-transform-origin: 16px 16px;
   transform: rotate(90deg);
   -webkit-transform: rotate(90deg);
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+.notice.is-hidden {
+  opacity: 0;
+  visibility: hidden;
 }
 
 /* line 644, ../sass/style.scss */
@@ -787,6 +814,10 @@ body {
 /* line 659, ../sass/style.scss */
 .settings-block .button.hover {
   opacity: 0.7;
+}
+.settings-block .button:hover,
+.settings-block .button:focus-visible {
+  opacity: 0.8;
 }
 /* line 663, ../sass/style.scss */
 .settings-block .setting-form {
@@ -842,7 +873,7 @@ body {
   margin: 0 10px 10px;
 }
 /* line 706, ../sass/style.scss */
-.settings-block .setting-form .setting-group .setting-input ul li span {
+.settings-block .setting-form .setting-group .setting-input ul li .button {
   display: block;
   border: 1px solid #ddd;
   color: #ddd;
@@ -852,7 +883,7 @@ body {
   cursor: pointer;
 }
 /* line 714, ../sass/style.scss */
-.settings-block .setting-form .setting-group .setting-input ul li span .fa {
+.settings-block .setting-form .setting-group .setting-input ul li .button i {
   display: none;
 }
 /* line 718, ../sass/style.scss */
@@ -873,13 +904,13 @@ body {
   font-size: 16px;
 }
 /* line 735, ../sass/style.scss */
-.settings-block .setting-form .setting-group .setting-input ul li.active span {
+.settings-block .setting-form .setting-group .setting-input ul li.active .button {
   border: 1px solid #fff;
   background: #eee;
   color: #000;
 }
 /* line 739, ../sass/style.scss */
-.settings-block .setting-form .setting-group .setting-input ul li.active span .fa {
+.settings-block .setting-form .setting-group .setting-input ul li.active .button i {
   display: inline-block;
 }
 /* line 748, ../sass/style.scss */
@@ -914,6 +945,15 @@ body {
   animation: fa-jump 0.2s infinite steps(4);
   animation-iteration-count: 2;
   -webkit-animation-iteration-count: 2;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .notice {
+    transition: none;
+  }
+  .life-block .diff {
+    transition: none;
+  }
 }
 
 @-webkit-keyframes fa-jump {

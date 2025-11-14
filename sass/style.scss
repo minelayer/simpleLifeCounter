@@ -3,7 +3,35 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
-@import "compass/reset";
+// @import "compass/reset";
+@use "../node_modules/modern-css-reset/src/reset";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  min-height: 100%;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font: inherit;
+}
 
 body{
 	background: #222;
@@ -532,6 +560,14 @@ body{
 	}
 }
 
+.show-names{
+	.life-block{
+		.name{
+			opacity: 1;
+		}
+	}
+}
+
 .poison{
 	display: none;
 	background: rgba(0,0,0,0.5);
@@ -656,6 +692,7 @@ body{
 		left: 0;
 	}
 	.button{
+		appearance: none;
 		&.hover{
 			opacity: 0.7;
 		}
@@ -665,8 +702,10 @@ body{
 		//height: 100%;
 		box-sizing: border-box;
 		.reload-group{
-			padding: 10px 0;
+			padding: 10px;
 			border-bottom:1px solid #777;
+			display: flex;
+			gap: 10px;
 			.reload{
 				border: 1px solid #930;
 				background: #c30;
@@ -675,7 +714,7 @@ body{
 				text-align: center;
 				border-radius: 5px;
 				cursor: pointer;
-				margin: 0 10px;
+				flex: 1;
 			}
 			.setting-reflesh{
 				border: 1px solid #777;
@@ -685,7 +724,7 @@ body{
 				text-align: center;
 				border-radius: 5px;
 				cursor: pointer;
-				margin: 0 10px;
+				flex: 1;
 			}
 		}
 		.setting-group{
@@ -699,11 +738,13 @@ body{
 					display: flex;
 					display: -webkit-flex;
 					flex-wrap: wrap;
+					gap: 10px;
+					padding: 0 10px;
+					margin-top: 10px;
 					li{
 						flex-grow: 1;
 						-webkit-flex-grow: 1;
-						margin: 0 10px 10px;
-						span{
+						span, button{
 							display: block;
 							border: 1px solid #ddd;
 							color: #ddd;
@@ -711,9 +752,15 @@ body{
 							text-align: center;
 							border-radius: 5px;
 							cursor: pointer;
-							.fa{
+							i {
 								display: none;
 							}
+						}
+						button {
+							-webkit-appearance:none;
+							-moz-appearance:none;
+							appearance:none;
+							width: 100%;
 						}
 						input{
 							-webkit-appearance:none;
@@ -732,11 +779,11 @@ body{
 							font-size: 16px;
 						}
 						&.active{
-							span{
+							span, button{
 								border: 1px solid #fff;
 								background: #eee;
 								color: #000;
-								.fa{
+								i {
 									display: inline-block;
 								}
 							}

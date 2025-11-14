@@ -762,6 +762,26 @@ body{
 	z-index: 500;
 }
 
+@-webkit-keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
 .fa-spin-fast {
   -webkit-animation: fa-spin .3s linear;
   animation: fa-spin .3s linear;
@@ -769,8 +789,8 @@ body{
   -webkit-animation-iteration-count: 1;
 }
 .fa-jump{
-  -webkit-animation: fa-jump .2s infinite steps(4);
-  animation: fa-jump .2s infinite steps(4);
+  -webkit-animation: fa-jump .2s steps(4);
+  animation: fa-jump .2s steps(4);
   animation-iteration-count: 2;
   -webkit-animation-iteration-count: 2;
 }

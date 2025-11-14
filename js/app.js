@@ -304,19 +304,16 @@ class LifeCounterApp {
 		});
 
 		window.addEventListener("pointerdown", (event) => {
-			if (event.pointerType !== "touch") {
-				return;
-			}
-			const inSettings = event.target.closest(".settings-block");
-			this.swipeStart = inSettings
-				? null
-				: { x: event.clientX, y: event.clientY };
-		});
+			// if (event.pointerType !== "touch") {
+			// 	return;
+			// }
+			this.swipeStart = { x: event.clientX, y: event.clientY };
+		}, { capture: true }); // キャプチャフェーズで登録
 
 		window.addEventListener("pointerup", (event) => {
-			if (!this.swipeStart || event.pointerType !== "touch") {
-				return;
-			}
+			// if (!this.swipeStart || event.pointerType !== "touch") {
+			// 	return;
+			// }
 			const deltaX = event.clientX - this.swipeStart.x;
 			const deltaY = Math.abs(event.clientY - this.swipeStart.y);
 			if (Math.abs(deltaX) > 60 && deltaY < 40) {
@@ -328,7 +325,7 @@ class LifeCounterApp {
 			}
 			this.swipeStart = null;
 		});
-
+		
 		window.addEventListener("pointercancel", () => {
 			this.swipeStart = null;
 		});

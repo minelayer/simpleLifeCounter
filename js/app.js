@@ -247,6 +247,7 @@ class LifeCounterApp {
 					500,
 				);
 				this.resetLife();
+				this.closeSettings(); // 設定パネルを閉じる
 			});
 		}
 

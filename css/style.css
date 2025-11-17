@@ -711,6 +711,11 @@ body {
   transform: rotate(90deg);
   -webkit-transform: rotate(90deg);
 }
+.notice.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out;
+}
 
 .settings-block {
   background: #222;
